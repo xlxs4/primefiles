@@ -36,6 +36,8 @@ Plug('junegunn/fzf', { ['do'] = function ()
 end })
 Plug('junegunn/fzf.vim')
 
+Plug('kdheepak/lazygit.nvim')
+
 Plug('miikanissi/modus-themes.nvim')
 
 vim.call('plug#end')

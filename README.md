@@ -25,6 +25,12 @@ Misc tools
 - mv ripgrep ... rg ~/.local/bin/
 - rm -rf ripgrep ...
 
+Lazygit
+- `wget https://github.com/jesseduffield/lazygit/releases/download/v0.53.0/lazygit_0.53.0_Linux_x86_64.tar.gz`
+- install delta: https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-unknown-linux-gnu.tar.gz
+- configure git to use delta with zdiff3: https://github.com/dandavison/delta#get-started
+- Add delta to lazygit: https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md#delta
+
 install fzf
 - wget https://github.com/junegunn/fzf/releases/download/v0.65.0/fzf-0.65.0-linux_amd64.tar.gz
 - shell integration: https://github.com/junegunn/fzf#setting-up-shell-integration
