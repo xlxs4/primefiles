@@ -21,9 +21,26 @@ vim.opt.incsearch = true          -- Show matches as you type
 
 -- Visual settings
 vim.opt.termguicolors = true      -- Enable 24-bit colors
+vim.opt.background = "dark"       -- Background
 vim.opt.signcolumn = "yes"        -- Always show sign column
 vim.opt.colorcolumn = "100"       -- Show column at 100 characters
 vim.opt.showmatch = true          -- Highlight matching brackets
 vim.opt.matchtime = 2             -- How long to show matching bracket
 vim.opt.cmdheight = 1             -- Command line height
+
+local Plug = vim.fn['plug#']
+vim.call('plug#begin')
+
+Plug('junegunn/fzf', { ['do'] = function ()
+  vim.fn['fzf#install']()
+end })
+Plug('junegunn/fzf.vim')
+
+Plug('miikanissi/modus-themes.nvim')
+
+vim.call('plug#end')
+
+-- Color schemes should be loaded after plug#end().
+-- We prepend it with 'silent!' to ignore errors when it's not yet installed.
+vim.cmd('silent! colorscheme modus')
 

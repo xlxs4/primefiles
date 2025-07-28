@@ -10,7 +10,8 @@ Layout
 - place local executables in $HOME/.local/bin
 - place system-wide binaries in /usr/local/bin
 - also refer to https://unix.stackexchange.com/questions/36871/where-should-a-local-user-executable-be-placed-under-home
-- Example -- add this to rc: ```sh
+- Example -- add this to rc:
+  ```sh
   if [ -d "$HOME/.local/bin" ] ; then
       PATH="$HOME/.local/bin:$PATH"
   fi
@@ -23,6 +24,10 @@ Misc tools
 - tar -xzf ripgrep 
 - mv ripgrep ... rg ~/.local/bin/
 - rm -rf ripgrep ...
+
+install fzf
+- wget https://github.com/junegunn/fzf/releases/download/v0.65.0/fzf-0.65.0-linux_amd64.tar.gz
+- shell integration: https://github.com/junegunn/fzf#setting-up-shell-integration
 
 - mkdir ~/gh # for GitHub repos
 
@@ -37,6 +42,11 @@ Neovim
 - install neovim nightly: bob install nightly && bob use nightly
 - if it didn't add to path automatically by editing your rc files, you need to essentially source "$HOME/.local/share/bob/env/env.sh"
 - add completions for bob: https://github.com/MordechaiHadad/bob#-shell-completion
+- vim-plug:
+  ```sh
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  ```
 
 Funtoo Keychain (https://www.funtoo.org/Funtoo:Keychain)
 - grab from https://github.com/funtoo/keychain/releases
