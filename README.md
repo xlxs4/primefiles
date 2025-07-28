@@ -25,6 +25,15 @@ Misc tools
 - mv ripgrep ... rg ~/.local/bin/
 - rm -rf ripgrep ...
 
+bat
+- https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz
+
+TODO
+eza
+zoxide
+hexyl
+...
+
 Lazygit
 - `wget https://github.com/jesseduffield/lazygit/releases/download/v0.53.0/lazygit_0.53.0_Linux_x86_64.tar.gz`
 - install delta: https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-unknown-linux-gnu.tar.gz
