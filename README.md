@@ -7,8 +7,8 @@ I use GNU stow for managing dotfiles
 Layout
 - https://specifications.freedesktop.org/basedir-spec/latest/#variables
 - https://wiki.archlinux.org/title/XDG_Base_Directory
-- place local executables in $HOME/.local/bin
-- place system-wide binaries in /usr/local/bin
+- place local executables in `$HOME/.local/bin`
+- place system-wide binaries in `/usr/local/bin`
 - also refer to https://unix.stackexchange.com/questions/36871/where-should-a-local-user-executable-be-placed-under-home
 - Example -- add this to rc:
   ```sh
@@ -19,20 +19,22 @@ Layout
 
 Misc tools
 - TODO: figure out installers
-- sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt install -y stow strace
-- wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz
-- tar -xzf ripgrep 
-- mv ripgrep ... rg ~/.local/bin/
-- rm -rf ripgrep ...
+- `sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt install -y stow strace`
+- `wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz`
+- `tar -xzf ripgrep`
+- `mv ripgrep ... rg ~/.local/bin/`
+- `rm -rf ripgrep ...`
 
 bat
 - https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz
 
-TODO
 eza
-zoxide
+- https://github.com/eza-community/eza/releases/download/v0.23.0/eza_x86_64-unknown-linux-musl.tar.gz
+
 hexyl
-...
+- https://github.com/sharkdp/hexyl/releases/download/v0.16.0/hexyl-v0.16.0-x86_64-unknown-linux-musl.tar.gz
+
+TODO: other useful tools...
 
 Lazygit
 - `wget https://github.com/jesseduffield/lazygit/releases/download/v0.53.0/lazygit_0.53.0_Linux_x86_64.tar.gz`
@@ -41,16 +43,19 @@ Lazygit
 - Add delta to lazygit: https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md#delta
 
 install fzf
-- wget https://github.com/junegunn/fzf/releases/download/v0.65.0/fzf-0.65.0-linux_amd64.tar.gz
+- `wget https://github.com/junegunn/fzf/releases/download/v0.65.0/fzf-0.65.0-linux_amd64.tar.gz`
 - shell integration: https://github.com/junegunn/fzf#setting-up-shell-integration
 
-- mkdir ~/gh # for GitHub repos
+- `mkdir ~/gh # for GitHub repos`
 
 GitHub CLI
 - install gh the same way: https://github.com/cli/cli/releases/download/v2.76.1/gh_2.76.1_linux_amd64.tar.gz
-- gh auth login
-- cd && gh repo clone xlxs4/primefiles
-- cd primefiles && stow .
+- `gh auth login`
+- `cd && gh repo clone xlxs4/primefiles`
+
+Dotfiles management
+- `cd primefiles && stow .`
+- TODO: consider using [`--dotfiles`](https://www.gnu.org/software/stow/manual/stow.html)
 
 Neovim
 - install bob: https://github.com/MordechaiHadad/bob
@@ -66,7 +71,7 @@ Neovim
 Funtoo Keychain (https://www.funtoo.org/Funtoo:Keychain)
 - grab from https://github.com/funtoo/keychain/releases
 - untar and rename to keychain from keychain.sh, move to path (~/.local/bin/)
-- add eval `keychain --eval id_ed25519` in rc file
+- add "eval `keychain --eval id_ed25519`" in rc file
 
 Julia
 - curl -fsSL https://install.julialang.org | sh
@@ -75,4 +80,17 @@ Julia
 GPG
 - `export GPG_TTY=$(tty)`
 - Remember to call git config with the key
+
+Aliases
+```sh
+alias tn='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias ta='tmux attach-session'
+
+alias vim='nvim'
+
+alias ls='eza'
+alias ll='eza -alF'
+alias la='eza -A'
+```
 
