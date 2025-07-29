@@ -99,3 +99,28 @@ alias ll='eza -alF'
 alias la='eza -A'
 ```
 
+---
+
+wsl.conf file: https://learn.microsoft.com/en-us/windows/wsl/wsl-config#wslconf
+- should be stored in `/etc`
+- support `systemd` (https://learn.microsoft.com/en-us/windows/wsl/wsl-config#systemd-support):
+  ```
+  [boot]
+  systemd=true
+  ```
+- block the launch of Windows processes, block adding `$PATH` envvars (https://learn.microsoft.com/en-us/windows/wsl/wsl-config#interop-settings):
+  ```
+  [interop]
+  enabled=false
+  appendWindowsPath=false
+  ```
+- Change initial username (https://learn.microsoft.com/en-us/windows/wsl/wsl-config#user-settings):
+  ```
+  [user]
+  default=xlxs4
+  ```
+
+all together:
+```
+
+```
