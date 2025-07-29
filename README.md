@@ -17,6 +17,11 @@ Layout
   fi
   ```
 
+font
+- Grab Commit Mono from https://commitmono.com/
+- Unpack fonts to `~/.local/share/fonts`
+- `fc-cache -f- v`
+
 Misc tools
 - TODO: figure out installers
 - `sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt install -y stow strace`

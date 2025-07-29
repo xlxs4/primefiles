@@ -1,0 +1,18 @@
+[general]
+import = ["themes/modus-vivendi.toml"]
+
+[env]
+TERM = "alacritty"
+LANG = "en_US.UTF-8"
+LC_CTYPE = "en_US.UTF-8"
+
+[font]
+size = 12
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[font.normal]
+family = "CommitMono"
+
