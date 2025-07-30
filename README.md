@@ -39,6 +39,9 @@ eza
 hexyl
 - https://github.com/sharkdp/hexyl/releases/download/v0.16.0/hexyl-v0.16.0-x86_64-unknown-linux-musl.tar.gz
 
+fd
+- https://github.com/sharkdp/fd/releases/download/v10.2.0/fd-v10.2.0-x86_64-unknown-linux-musl.tar.gz
+
 TODO: other useful tools...
 
 Lazygit
