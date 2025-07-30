@@ -109,6 +109,8 @@ WSL2 is... okay? There's wslg for GUI/GPU stuff, some somewhat sensible defaults
 Still far, far from great.
 Nowadays, I don't even use VSCode for WSL development.
 VSCode has become extremely bloated.
+Oh, and also, they bumped their glibc requirement: https://github.com/microsoft/vscode/issues/203375
+So I can't use it in half the boxes I SSH into at work (yay aerospace).
 [`code-server`](https://github.com/coder/code-server) is a somewhat better alternative.
 I just use tmux + nvim/vim instead.
 For the terminal, Alacritty is fine, the new terminal is also okay.
