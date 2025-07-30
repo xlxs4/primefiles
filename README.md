@@ -25,6 +25,8 @@ font
 Misc tools
 - TODO: figure out installers
 - `sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt install -y stow strace`
+
+ripgrep
 - `wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz`
 - `tar -xzf ripgrep`
 - `mv ripgrep ... rg ~/.local/bin/`
