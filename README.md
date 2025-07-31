@@ -170,6 +170,8 @@ So I can't use it in half the boxes I SSH into at work (yay aerospace).
 [`code-server`](https://github.com/coder/code-server) is a somewhat better alternative.
 I just use tmux + nvim/vim instead.
 For the terminal, Alacritty is fine, the new terminal is also okay.
+NOTE: For Alacritty, run `curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x -` to install the needed terminfo
+-- see https://github.com/alacritty/alacritty/issues/3962#issuecomment-862212371
 Don't forget to always install the actually up-to-date Powershell.
 The only exception to the rule of "try to do everything in WSL" is that Docker Desktop using WSL2 as its engine is more robust than running the docker service from Linux, especially if you start tinkering with stuff
 
@@ -274,3 +276,67 @@ networkingMode=mirrored
 sparseVhd=true
 ```
 
+<<<<<<< HEAD
+=======
+---
+
+MacOS
+
+- System Settings -> Appearance -> Dark
+- Install Xcode command tools -- needed for UNIX dev: `sudo xcode-select --install`
+- install Homebrew: https://brew.sh
+  ```sh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo >> /Users/xlxs4/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/xlxs4/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  ```
+- Install Zen Browser: https://zen-browser.app/download/
+
+- Consider installing BetterDisplay: https://github.com/waydabber/BetterDisplay
+
+Browser Extensions
+- Ublock Origin
+- Dark Reader
+- Bitwarden -- TODO: migrate to desktop/CLI, EU server, and cleanup
+- Kagi
+- Vimium C
+
+- System Settings -> Autofill & Passwords -> disable AutoFill passwords & passkeys
+- System Settings -> Desktop & Dock -> Automatically hide and show the Dock -- ON
+- System Settings -> Desktop & Dock -> Animate opening applications -- OFF
+- System Settings -> Desktop & Dock -> Show suggested and recent apps in Dock -- OFF
+- System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Click wallpaper to reveal Desktop -> Only in Stage Manager
+- System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Show items -> In Stage Manager
+- System Settings -> Desktop & Dock -> Widgets -> Show Widgets -> In Stage Manager
+- System Settings -> Desktop & Dock -> Default Web Browser -> Change to something other than Safari (Zen)
+- System Settings -> Desktop & Dock -> Windows -> Drag windows to screen edges to tile -- OFF
+- System Settings -> Desktop & Dock -> Windows -> Drag windows to menu bar to fill screen -- OFF
+- System Settings -> Desktop & Dock -> Windows -> Hold option key while dragging windows to tile -- OFF
+- System Settings -> Desktop & Dock -> Windows -> Tiled windows have margins -- OFF
+- System Settings -> Desktop & Dock -> Mission Control -> Drag windows to top of screen to enter Mission Control -- OFF
+- System Settings -> Mouse -> Natural Scrolling -- OFF
+- System Settings -> Spotlight -> Help Apple Improve Search -- OFF
+- System Settings -> Spotlight -> toggle OFF everything in "Search Results"
+  also `sudo mdutil -i off /`
+
+- Install [aerospace tiling WM](https://github.com/nikitabobko/AeroSpace): `brew install --cask nikitabobko/tap/aerospace`
+- Install [GH CLI](https://cli.github.com/): `brew install gh`
+- Install [Alacritty](https://alacritty.org/)
+
+- Install stow: `brew install stow`
+- Install wget: `brew install wget`
+- Install tmux: `brew install tmux`
+- Install [dmenu-mac](https://github.com/oNaiPs/dmenu-mac?tab=readme-ov-file): `brew install dmenu-mac`
+
+For GPG:
+```sh
+if [ -r ~/.zshrc ]; then echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zshrc; \
+  else echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zprofile; fi
+
+brew install pinentry-mac
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+```
+
+>>>>>>> 286b414 (Add MacOS notes)
