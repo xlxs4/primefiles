@@ -1,0 +1,40 @@
+[mgr]
+linemode = "size"
+show_hidden = true
+show_symlink = true
+scrolloff = 10 # -- same as in nvim config
+
+# >>> Theme >>>
+cwd = { fg = "#6ae4b9" }  # cyan-cooler
+
+hovered = { reversed = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#d0bc00", bold = true, italic = true, underline = true } # yellow
+find_position = { fg = "#feacd0", bg = "reset", bold = true, italic = true } # magenta
+
+marker_copied   = { fg = "#44bc44", bg = "#44bc44" } # green
+marker_cut      = { fg = "#ff5f59", bg = "#ff5f59" }  # red
+marker_marked   = { fg = "#00bcff", bg = "#00bcff" }  # blue-cooler
+marker_selected = { fg = "#d0bc00", bg = "#d0bc00" }  # yellow
+
+count_copied   = { fg = "#000000", bg = "#44bc44" }  # bg-main on green
+count_cut      = { fg = "#000000", bg = "#ff5f59" }  # bg-main on red
+count_selected = { fg = "#000000", bg = "#d0bc00" }  # bg-main on yellow
+
+border_symbol = "│"
+border_style  = { fg = "#646464" }
+# <<< Theme <<<
+
+[tabs]
+# >>> Theme >>>
+active   = { fg = "#000000", bg = "#b6a0ff", bold = true } # bg-main on magenta-cooler
+inactive = { fg = "#b6a0ff", bg = "#303030" } # magenta-cooler on bg-inactive
+# <<< Theme <<<
+
+[preview]
+wrap = "no"
+tab_size = 2
+
+[input]
+cursor_blink = true

@@ -24,7 +24,23 @@ font
 
 Misc tools
 - TODO: figure out installers
-- `sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt install -y stow strace`
+  -- it'd be nice if I had a server I could `scp` binaries from
+  to other machines
+- TODO: figure out SSH, GPG keys
+- TODO: figure out key remaps in a cross-platform way.
+  We need:
+  - caps mapped to ctrl/meta/super (probably meta)
+  - caps acting as escape on single press for nvim/vim
+  - `setxkbmap`, `xset`, `xcape`, `xdotool`, etc., is fine, but WSL2 uses Wayland :(
+  - controls list: https://gist.github.com/matoken/5c2b9d2f0b92c21452cf8b4f01f7e149
+  - things like `Super_L` will be extra challenging: https://unix.stackexchange.com/a/1686
+  - also investigate things like https://gitlab.com/interception/linux/tools
+
+```sh
+sudo apt update && sudo apt upgrade -y && sudo apt install -y \
+stow \
+strace
+```
 
 ripgrep
 - `wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz`
@@ -44,6 +60,26 @@ hexyl
 fd
 - https://github.com/sharkdp/fd/releases/download/v10.2.0/fd-v10.2.0-x86_64-unknown-linux-musl.tar.gz
 
+jq
+- https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-linux-amd64
+
+tms
+- https://github.com/jrmoulton/tmux-sessionizer/releases/download/v0.4.5/tmux-sessionizer-x86_64-unknown-linux-musl.tar.xz
+
+yazi
+- https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-unknown-linux-musl.zip 
+
+```bash
+# https://yazi-rs.github.io/docs/quick-start/
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+}
+```
+
 TODO: other useful tools...
 
 Lazygit
@@ -57,6 +93,7 @@ install fzf
 - shell integration: https://github.com/junegunn/fzf#setting-up-shell-integration
 
 - `mkdir ~/gh # for GitHub repos`
+- NOTE: also used by `tms` (see `.config/tms/config.toml`)
 
 GitHub CLI
 - install gh the same way: https://github.com/cli/cli/releases/download/v2.76.1/gh_2.76.1_linux_amd64.tar.gz
@@ -102,6 +139,11 @@ alias vim='nvim'
 alias ls='eza'
 alias ll='eza -alF'
 alias la='eza -A'
+```
+
+Exports
+```sh
+export EDITOR=nvim
 ```
 
 ---

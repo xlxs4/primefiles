@@ -1,0 +1,12 @@
+# No icons: https://yazi-rs.github.io/docs/faq/#dont-like-nerd-fonts
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[icon]
+globs = []
+dirs = []
+files = []
+exts = []
+conds = []
+
