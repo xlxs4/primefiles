@@ -26,6 +26,7 @@ theme
 - modus (vivendi) from Prot -- https://protesilaos.com/emacs/modus-themes
 - for neovim: https://github.com/miikanissi/modus-themes.nvim
 - there's a bunch of autogen themes in https://github.com/miikanissi/modus-themes.nvim?tab=readme-ov-file#extras
+- colors can be found in https://github.com/miikanissi/modus-themes.nvim/blob/master/lua/modus-themes/colors.lua
 
 Misc tools
 - TODO: figure out installers
