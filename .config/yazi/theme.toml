@@ -1,8 +1,7 @@
-# No icons: https://yazi-rs.github.io/docs/faq/#dont-like-nerd-fonts
-[status]
-sep_left  = { open = "", close = "" }
-sep_right = { open = "", close = "" }
+# Modus Vivendi theme for Yazi (Minimal)
+# Based on Protesilaos Stavrou's Modus Vivendi theme for Emacs
 
+# No icons: https://yazi-rs.github.io/docs/faq/#dont-like-nerd-fonts
 [icon]
 globs = []
 dirs = []
@@ -10,28 +9,222 @@ files = []
 exts = []
 conds = []
 
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+overall = { fg = "#ffffff", bg = "#000000" }
+
+perm_type  = { fg = "#b6a0ff" }
+perm_read  = { fg = "#d0bc00" }
+perm_write = { fg = "#ff5f59" }
+perm_exec  = { fg = "#44bc44" }
+
+progress_normal = { fg = "#b6a0ff", bg = "#535353" }
+progress_error  = { fg = "#ff5f59", bg = "#535353" }
+
 [mgr]
-cwd = { fg = "#6ae4b9" }  # cyan-cooler
+cwd = { fg = "#6ae4b9" }
 
 hovered = { reversed = true }
-preview_hovered = { underline = true }
 
-find_keyword  = { fg = "#d0bc00", bold = true, italic = true, underline = true } # yellow
-find_position = { fg = "#feacd0", bg = "reset", bold = true, italic = true } # magenta
+marker_copied   = { fg = "#44bc44", bg = "#44bc44" }
+marker_cut      = { fg = "#ff5f59", bg = "#ff5f59" }
+marker_selected = { fg = "#d0bc00", bg = "#d0bc00" }
 
-marker_copied   = { fg = "#44bc44", bg = "#44bc44" } # green
-marker_cut      = { fg = "#ff5f59", bg = "#ff5f59" }  # red
-marker_marked   = { fg = "#00bcff", bg = "#00bcff" }  # blue-cooler
-marker_selected = { fg = "#d0bc00", bg = "#d0bc00" }  # yellow
-
-count_copied   = { fg = "#000000", bg = "#44bc44" }  # bg-main on green
-count_cut      = { fg = "#000000", bg = "#ff5f59" }  # bg-main on red
-count_selected = { fg = "#000000", bg = "#d0bc00" }  # bg-main on yellow
-
-border_symbol = "│"
-border_style  = { fg = "#646464" }
+border_style = { fg = "#646464" }
 
 [tabs]
-active   = { fg = "#000000", bg = "#b6a0ff", bold = true } # bg-main on magenta-cooler
-inactive = { fg = "#b6a0ff", bg = "#303030" } # magenta-cooler on bg-inactive
 
+active   = { fg = "#000000", bg = "#b6a0ff", bold = true }
+inactive = { fg = "#b6a0ff", bg = "#303030" }
+
+[mode]
+normal_main = { fg = "#000000", bg = "#b6a0ff", bold = true }
+normal_alt  = { fg = "#b6a0ff", bg = "#303030" }
+
+select_main = { fg = "#000000", bg = "#6ae4b9", bold = true }
+select_alt  = { fg = "#6ae4b9", bg = "#303030" }
+
+[which]
+mask = { bg = "#303030" }
+cand = { fg = "#6ae4b9" }
+rest = { fg = "#989898" }
+desc = { fg = "#feacd0" }
+
+[notify]
+title_info  = { fg = "#44bc44" }
+title_warn  = { fg = "#fec43f" }
+title_error = { fg = "#ff5f59" }
+
+# >>> More complete implementation >>>
+# [status]
+#
+# sep_left  = { open = "", close = "" }
+# sep_right = { open = "", close = "" }
+#
+# overall = { fg = "#ffffff", bg = "#000000" }
+#
+#
+# perm_sep   = { fg = "#646464" }
+# perm_type  = { fg = "#b6a0ff" }
+# perm_read  = { fg = "#d0bc00" }
+# perm_write = { fg = "#ff5f59" }
+# perm_exec  = { fg = "#44bc44" }
+#
+# progress_label  = { fg = "#ffffff", bold = true }
+# progress_normal = { fg = "#b6a0ff", bg = "#535353" }
+# progress_error  = { fg = "#ff5f59", bg = "#535353" }
+#
+#
+# [icon]
+# globs = []
+# dirs = []
+# files = []
+# exts = []
+# conds = []
+#
+# [mgr]
+# cwd = { fg = "#6ae4b9" }
+#
+# hovered = { reversed = true }
+# preview_hovered = { underline = true }
+#
+# find_keyword  = { fg = "#d0bc00", bold = true, italic = true, underline = true }
+# find_position = { fg = "#feacd0", bg = "reset", bold = true, italic = true }
+#
+# marker_copied   = { fg = "#44bc44", bg = "#44bc44" }
+# marker_cut      = { fg = "#ff5f59", bg = "#ff5f59" }
+# marker_marked   = { fg = "#00bcff", bg = "#00bcff" }
+# marker_selected = { fg = "#d0bc00", bg = "#d0bc00" }
+#
+#
+# count_copied   = { fg = "#000000", bg = "#44bc44" }
+# count_cut      = { fg = "#000000", bg = "#ff5f59" }
+# count_selected = { fg = "#000000", bg = "#d0bc00" }
+#
+#
+# border_symbol = "│"
+# border_style  = { fg = "#646464" }
+#
+# [tabs]
+# active   = { fg = "#000000", bg = "#b6a0ff", bold = true }
+# inactive = { fg = "#b6a0ff", bg = "#303030" }
+#
+# [mode]
+# normal_main = { fg = "#000000", bg = "#b6a0ff", bold = true }
+# normal_alt  = { fg = "#b6a0ff", bg = "#303030" }
+#
+# select_main = { fg = "#000000", bg = "#6ae4b9", bold = true }
+# select_alt  = { fg = "#6ae4b9", bg = "#303030" }
+#
+# unset_main = { fg = "#000000", bg = "#fec43f", bold = true }
+# unset_alt  = { fg = "#fec43f", bg = "#303030" }
+#
+# [which]
+# cols = 3
+#
+# mask = { bg = "#303030" }
+# cand = { fg = "#6ae4b9" }
+# rest = { fg = "#989898" }
+# desc = { fg = "#feacd0" }
+#
+# separator = "  "
+# separator_style = { fg = "#646464" }
+#
+#
+# [confirm]
+# border  = { fg = "#b6a0ff" }
+# title   = { fg = "#ffffff", bold = true }
+# content = { fg = "#ffffff" }
+#
+# list    = { fg = "#c6daff" }
+#
+# btn_yes = { fg = "#000000", bg = "#44bc44", bold = true }
+# btn_no  = { fg = "#000000", bg = "#ff5f59", bold = true }
+#
+# btn_labels = ["Yes", "No"]
+#
+#
+# [spot]
+# border   = { fg = "#b6a0ff" }
+# title    = { fg = "#ffffff", bold = true }
+# tbl_col  = { fg = "#6ae4b9", bold = true }
+# tbl_cell = { fg = "#ffffff" }
+#
+# [notify]
+# title_info  = { fg = "#44bc44" }
+# title_warn  = { fg = "#fec43f" }
+# title_error = { fg = "#ff5f59" }
+#
+# [pick]
+# border   = { fg = "#b6a0ff" }
+# active   = { fg = "#feacd0", bold = true }
+# inactive = { fg = "#989898" }
+#
+# [input]
+# border   = { fg = "#b6a0ff" }
+# title    = { fg = "#ffffff", bold = true }
+# value    = { fg = "#ffffff" }
+# selected = { reversed = true }
+#
+# [cmp]
+# border   = { fg = "#b6a0ff" }
+# active   = { fg = "#000000", bg = "#6ae4b9" }
+# inactive = { fg = "#ffffff" }
+#
+# [tasks]
+# border  = { fg = "#b6a0ff" }
+# title   = { fg = "#ffffff", bold = true }
+# hovered = { fg = "#feacd0", underline = true }
+#
+# [help]
+# on   = { fg = "#6ae4b9" }
+# run  = { fg = "#feacd0" }
+#
+# desc = { fg = "#c6daff" }
+#
+# hovered = { reversed = true, bold = true }
+# footer  = { fg = "#303030", bg = "#ffffff" }
+#
+# [filetype]
+#
+# rules = [
+#
+# 	{ mime = "image/*", fg = "#00bcff" },
+#
+# 	{ mime = "video/*", fg = "#d0bc00" },
+# 	{ mime = "audio/*", fg = "#d0bc00" },
+#
+# 	{ mime = "application/*zip*", fg = "#feacd0" },
+# 	{ mime = "application/*rar*", fg = "#feacd0" },
+# 	{ mime = "application/*tar*", fg = "#feacd0" },
+# 	{ mime = "application/*7z*", fg = "#feacd0" },
+#
+# 	{ mime = "application/gzip", fg = "#feacd0" },
+# 	{ mime = "application/x-xz", fg = "#feacd0" },
+#
+# 	{ mime = "application/pdf", fg = "#44bc44" },
+# 	{ mime = "application/msword", fg = "#44bc44" },
+#
+# 	{ mime = "application/rtf", fg = "#44bc44" },
+#
+# 	{ mime = "inode/empty", fg = "#989898" },
+#
+# 	{ name = "*", is = "exec", fg = "#ff6b55" },
+#
+# 	{ name = "*", is = "orphan", fg = "#ff5f59", crossed = true },
+#
+#
+# 	{ name = ".*", fg = "#989898" },
+#
+# 	{ name = "*.{json,toml,yaml,yml,xml,ini,conf,config}", fg = "#6ae4b9" },
+#
+# 	{ name = "*.{py,js,ts,rs,go,c,cpp,h,hpp,jl,java,kt,scala,rb,php,sh,bash,zsh,fish}", fg = "#79a8ff" },
+#
+# 	{ name = "*.{md,txt,rst,org,tex}", fg = "#c6daff" },
+#
+# 	{ name = "*", fg = "#ffffff" },
+# 	{ name = "*/", fg = "#b6a0ff" }
+# ]
+# <<< More complete implementation <<<
