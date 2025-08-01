@@ -1,5 +1,5 @@
 [general]
-import = ["themes/modus-vivendi.toml"]
+import = ["themes/modus_vivendi.toml"]
 
 [env]
 TERM = "alacritty"

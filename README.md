@@ -22,6 +22,11 @@ font
 - Unpack fonts to `~/.local/share/fonts`
 - `fc-cache -f- v`
 
+theme
+- modus (vivendi) from Prot -- https://protesilaos.com/emacs/modus-themes
+- for neovim: https://github.com/miikanissi/modus-themes.nvim
+- there's a bunch of autogen themes in https://github.com/miikanissi/modus-themes.nvim?tab=readme-ov-file#extras
+
 Misc tools
 - TODO: figure out installers
   -- it'd be nice if I had a server I could `scp` binaries from
@@ -264,3 +269,4 @@ autoMemoryReclaim=gradual
 networkingMode=mirrored
 sparseVhd=true
 ```
+
