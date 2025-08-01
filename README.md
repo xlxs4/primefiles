@@ -86,9 +86,12 @@ function y() {
 }
 ```
 
+mosh
+- https://github.com/mobile-shell/mosh
+
 TODO: other useful tools...
 
-Lazygit
+lazygit
 - `wget https://github.com/jesseduffield/lazygit/releases/download/v0.53.0/lazygit_0.53.0_Linux_x86_64.tar.gz`
 - install delta: https://github.com/dandavison/delta/releases/download/0.18.2/delta-0.18.2-x86_64-unknown-linux-gnu.tar.gz
 - configure git to use delta with zdiff3: https://github.com/dandavison/delta#get-started
