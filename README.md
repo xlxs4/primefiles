@@ -33,6 +33,7 @@ Misc tools
   -- it'd be nice if I had a server I could `scp` binaries from
   to other machines
 - TODO: figure out SSH, GPG keys
+- After setting up SSH for signing with GitHub, don't forget `ssh-add <SSH KEY>`
 - TODO: figure out key remaps in a cross-platform way.
   We need:
   - caps mapped to ctrl/meta/super (probably meta)
@@ -74,6 +75,11 @@ tms
 
 yazi
 - https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-unknown-linux-musl.zip 
+
+zoxide
+- https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+- [alias](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#flags) to cd: `eval "$(zoxide init --cmd cd zsh)"`
+
 
 ```bash
 # https://yazi-rs.github.io/docs/quick-start/
@@ -276,8 +282,6 @@ networkingMode=mirrored
 sparseVhd=true
 ```
 
-<<<<<<< HEAD
-=======
 ---
 
 MacOS
@@ -301,25 +305,57 @@ Browser Extensions
 - Bitwarden -- TODO: migrate to desktop/CLI, EU server, and cleanup
 - Kagi
 - Vimium C
+- Enhancer for Youtube
+- Google Scholar Button
 
+- System Settings -> Security & Privacy -> FileVault -> Turn On
+  - Create a recovery key and do not use my iCloud account
 - System Settings -> Autofill & Passwords -> disable AutoFill passwords & passkeys
+- System Settings -> Apple Intelligence & Siri -> Apple Intelligence -- OFF
+- System Settings -> Apple Intelligence & Siri -> Siri Requests -> Siri -- OFF
 - System Settings -> Desktop & Dock -> Automatically hide and show the Dock -- ON
+- System Settings -> Desktop & Dock -> Minimize windows into application icon -- ON
 - System Settings -> Desktop & Dock -> Animate opening applications -- OFF
 - System Settings -> Desktop & Dock -> Show suggested and recent apps in Dock -- OFF
 - System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Click wallpaper to reveal Desktop -> Only in Stage Manager
 - System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Show items -> In Stage Manager
 - System Settings -> Desktop & Dock -> Widgets -> Show Widgets -> In Stage Manager
 - System Settings -> Desktop & Dock -> Default Web Browser -> Change to something other than Safari (Zen)
+- System Settings -> Desktop & Dock -> Windows -> Prefer tabs when opening documents -- Always
 - System Settings -> Desktop & Dock -> Windows -> Drag windows to screen edges to tile -- OFF
 - System Settings -> Desktop & Dock -> Windows -> Drag windows to menu bar to fill screen -- OFF
 - System Settings -> Desktop & Dock -> Windows -> Hold option key while dragging windows to tile -- OFF
 - System Settings -> Desktop & Dock -> Windows -> Tiled windows have margins -- OFF
 - System Settings -> Desktop & Dock -> Mission Control -> Drag windows to top of screen to enter Mission Control -- OFF
+- System Settings -> Desktop & Dock -> Mission Control -> Hot Corners -- disable all
+- System Settings -> Notifications -> Messages -> Play sound for notification -- OFF
+- System Settings -> Keyboard -> Key repeat rate -- Fast
+- System Settings -> Keyboard -> Delay until repeat -- Short
+- System Settings -> Keyboard -> Delay until repeat -- Short
+- System Settings -> Keyboard -> Shortcuts -> Show Spotlight search -- OFF
 - System Settings -> Mouse -> Natural Scrolling -- OFF
+- System Settings -> Sound -> Play sound on startup -- OFF
 - System Settings -> Spotlight -> Help Apple Improve Search -- OFF
 - System Settings -> Spotlight -> toggle OFF everything in "Search Results"
   also `sudo mdutil -i off /`
+- Remove stuff you don't need from the dock
+- Control Center -> Battery -> Show Percentage -- ON
+  change what appears on the menubar, or use [Ice](https://github.com/jordanbaird/Ice) instead
+- Right click on Downloads folder on Dock (if you're keeping that)
+  - Display as: Stack
+  - View content as: Grid
+- Go to Finder -> Settings -> Sidebar: enable everything
+  Advanced:
+  - Show all filename extensions -- ON
+  - Show warning before changing an extension -- OFF
+  - When performing a search -- Search the Current Folder
+- Go to Finder -> View:
+  - Show Path Bar
+  - Show Status Bar
 
+- Show hidden files: `defaults write com.apple.finder AppleShowAllFiles YES`
+
+- Install git -- MacOS comes with git by default, but it's an older version: `brew install git`
 - Install [aerospace tiling WM](https://github.com/nikitabobko/AeroSpace): `brew install --cask nikitabobko/tap/aerospace`
 - Install [GH CLI](https://cli.github.com/): `brew install gh`
 - Install [Alacritty](https://alacritty.org/)
@@ -327,7 +363,13 @@ Browser Extensions
 - Install stow: `brew install stow`
 - Install wget: `brew install wget`
 - Install tmux: `brew install tmux`
+- Install zoxide: `brew install zoxide`
+- Install fzf: `brew install fzf`
+- Install tree: `brew install tree`
 - Install [dmenu-mac](https://github.com/oNaiPs/dmenu-mac?tab=readme-ov-file): `brew install dmenu-mac`
+- Install lazygit: `brew install lazygit`
+
+- Install pwgen: `brew install pwgen`
 
 For GPG:
 ```sh
@@ -339,4 +381,3 @@ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
 ```
 
->>>>>>> 286b414 (Add MacOS notes)
