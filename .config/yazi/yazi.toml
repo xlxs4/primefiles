@@ -1,0 +1,12 @@
+[mgr]
+linemode = "size"
+show_hidden = true
+show_symlink = true
+scrolloff = 10 # -- same as in nvim config
+
+[preview]
+wrap = "no"
+tab_size = 2
+
+[input]
+cursor_blink = true

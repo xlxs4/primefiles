@@ -1,0 +1,59 @@
+# Modus Vivendi theme for Yazi (Minimal)
+# Based on Protesilaos Stavrou's Modus Vivendi theme for Emacs
+
+# No icons: https://yazi-rs.github.io/docs/faq/#dont-like-nerd-fonts
+[icon]
+globs = []
+dirs = []
+files = []
+exts = []
+conds = []
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+overall = { fg = "#ffffff", bg = "#000000" }
+
+perm_type  = { fg = "#b6a0ff" }
+perm_read  = { fg = "#d0bc00" }
+perm_write = { fg = "#ff5f59" }
+perm_exec  = { fg = "#44bc44" }
+
+progress_normal = { fg = "#b6a0ff", bg = "#535353" }
+progress_error  = { fg = "#ff5f59", bg = "#535353" }
+
+[mgr]
+cwd = { fg = "#6ae4b9" }
+
+hovered = { reversed = true }
+
+marker_copied   = { fg = "#44bc44", bg = "#44bc44" }
+marker_cut      = { fg = "#ff5f59", bg = "#ff5f59" }
+marker_selected = { fg = "#d0bc00", bg = "#d0bc00" }
+
+border_style = { fg = "#646464" }
+
+[tabs]
+
+active   = { fg = "#000000", bg = "#b6a0ff", bold = true }
+inactive = { fg = "#b6a0ff", bg = "#303030" }
+
+[mode]
+normal_main = { fg = "#000000", bg = "#b6a0ff", bold = true }
+normal_alt  = { fg = "#b6a0ff", bg = "#303030" }
+
+select_main = { fg = "#000000", bg = "#6ae4b9", bold = true }
+select_alt  = { fg = "#6ae4b9", bg = "#303030" }
+
+[which]
+mask = { bg = "#303030" }
+cand = { fg = "#6ae4b9" }
+rest = { fg = "#989898" }
+desc = { fg = "#feacd0" }
+
+[notify]
+title_info  = { fg = "#44bc44" }
+title_warn  = { fg = "#fec43f" }
+title_error = { fg = "#ff5f59" }
+

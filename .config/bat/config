@@ -1,0 +1,4 @@
+# https://github.com/sharkdp/bat?tab=readme-ov-file#configuration-file
+--theme="modus_vivendi"
+--pager="delta"
+--tabs=2
