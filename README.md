@@ -30,6 +30,8 @@ theme
 
 Misc tools
 - TODO: figure out installers
+- TODO: completions
+- TODO: shell configuration files
   -- it'd be nice if I had a server I could `scp` binaries from
   to other machines
 - TODO: figure out SSH, GPG keys
@@ -380,4 +382,6 @@ brew install pinentry-mac
 echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
 ```
+
+Consider installing Rosetta
 
