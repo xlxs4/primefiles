@@ -59,6 +59,7 @@ ripgrep
 
 bat
 - https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-musl.tar.gz
+- run `bat cache --build` so that bat recognizes the modus theme
 
 eza
 - https://github.com/eza-community/eza/releases/download/v0.23.0/eza_x86_64-unknown-linux-musl.tar.gz
@@ -370,6 +371,7 @@ Browser Extensions
 - Install tree: `brew install tree`
 - Install [dmenu-mac](https://github.com/oNaiPs/dmenu-mac?tab=readme-ov-file): `brew install dmenu-mac`
 - Install lazygit: `brew install lazygit`
+- `brew install tmux-sessionizer`
 
 - Install pwgen: `brew install pwgen`
 
