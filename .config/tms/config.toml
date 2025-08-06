@@ -1,0 +1,4 @@
+search_dirs = [
+    { path = "~/gh", depth = 1 },
+]
+
