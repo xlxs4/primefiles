@@ -22,7 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 
 -- Basic settings
-vim.opt.number = true  		      -- Line numbers
+vim.opt.number = true  		        -- Line numbers
 vim.opt.relativenumber = true     -- Relative line numbers
 vim.opt.cursorline = true         -- Highlight current line
 vim.opt.scrolloff = 10            -- Maintain 10 lines above/below cursor
@@ -51,8 +51,13 @@ vim.opt.showmatch = true          -- Highlight matching brackets
 vim.opt.matchtime = 2             -- How long to show matching bracket
 vim.opt.cmdheight = 1             -- Command line height
 
+-- Leader settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+
+-- Misc
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 require("lazy").setup({
   spec = {
