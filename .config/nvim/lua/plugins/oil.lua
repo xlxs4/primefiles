@@ -7,6 +7,6 @@ return {
     },
   },
   keys = {
-    { "<leader>o", "<cmd>Oil<CR>", desc = "Oil (Buffer-like Explorer)" },
+    { "<leader>o", "<cmd>Oil<CR>", desc = "Buffer-like Explorer (oil)" },
   },
 }
