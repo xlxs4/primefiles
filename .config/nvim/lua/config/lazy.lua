@@ -55,12 +55,6 @@ vim.opt.cmdheight = 1             -- Command line height
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Misc
--- - :h nvim-tree-netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-
 require("lazy").setup({
   spec = {
     { import = "plugins" },
