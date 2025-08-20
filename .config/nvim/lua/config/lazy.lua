@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 
--- Basic settings
+-- Basic
 vim.opt.number = true  		        -- Line numbers
 vim.opt.relativenumber = true     -- Relative line numbers
 vim.opt.cursorline = true         -- Highlight current line
@@ -36,13 +36,13 @@ vim.opt.expandtab = true          -- Use spaces instead of tabs
 vim.opt.smartindent = true        -- Smart auto-indenting
 vim.opt.autoindent = true         -- Copy indent from current line
 
--- Search settings
+-- Search
 vim.opt.ignorecase = true         -- Case insensitive search
 vim.opt.smartcase = true          -- Case sensitive if uppercase in search
 vim.opt.hlsearch = false          -- Don't highlight search results 
 vim.opt.incsearch = true          -- Show matches as you type
 
--- Visual settings
+-- Visual
 vim.opt.termguicolors = true      -- Enable 24-bit colors
 vim.opt.background = "dark"       -- Background
 vim.opt.signcolumn = "yes"        -- Always show sign column
@@ -51,9 +51,15 @@ vim.opt.showmatch = true          -- Highlight matching brackets
 vim.opt.matchtime = 2             -- How long to show matching bracket
 vim.opt.cmdheight = 1             -- Command line height
 
--- Leader settings
+-- Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+
+-- Misc
+-- - :h nvim-tree-netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 
 require("lazy").setup({
   spec = {

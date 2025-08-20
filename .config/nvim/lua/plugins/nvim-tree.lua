@@ -17,7 +17,9 @@ return {
       },
     },
   },
-  config = function(_, opts)
-    require("nvim-tree").setup(opts)
-  end,
+  keys = {
+    { "<leader>tt", "<cmd>NvimTreeToggle<CR>", desc = "Tree Toggle" },
+    { "<leader>tf", "<cmd>NvimTreeFindFile<CR>", desc = "Tree Find File" },
+    { "<leader>tc", "<cmd>NvimTreeCollapse<CR>", desc = "Tree Collapse" },
+  }
 }
