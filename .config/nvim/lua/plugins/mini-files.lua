@@ -7,7 +7,4 @@ return {
       prefix = function() end
     },
   },
-  config = function(_, opts)
-   require("mini.files").setup(opts)
-  end,
 }
