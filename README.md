@@ -17,6 +17,8 @@ Layout
   fi
   ```
 
+- man pages: `$HOME/.local/share/man` (also update `$MANPATH`)
+
 font
 - Grab Commit Mono from https://commitmono.com/
 - Unpack fonts to `~/.local/share/fonts`
@@ -82,6 +84,12 @@ yazi
 zoxide
 - https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 - [alias](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#flags) to cd: `eval "$(zoxide init --cmd cd zsh)"`
+
+cloc
+- https://github.com/AlDanial/cloc/releases/download/v2.06/cloc-2.06.tar.gz
+
+universal-ctags
+- https://github.com/universal-ctags/ctags-nightly-build/releases/download/2025.08.04%2B475a7bc246c22cb6ef1c6659103977a9de544667/uctags-2025.08.04-linux-x86_64.release.tar.gz
 
 
 ```bash
