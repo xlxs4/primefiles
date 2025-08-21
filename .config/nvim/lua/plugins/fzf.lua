@@ -14,6 +14,7 @@ return {
     { "<leader>sb", "<cmd>FzfLua builtin<CR>", desc = "Fuzzy Find Commands" },
     { "<leader>sr", "<cmd>FzfLua resume<CR>", desc = "Fuzzy Find Resume" },
     { "<leader>sg", "<cmd>FzfLua live_grep_native<CR>", desc = "Grep" },
+    { "<leader>s/", "<cmd>FzfLua blines<CR>", desc = "Fuzzy Find Buffer Lines" },
     { "<leader>sh", "<cmd>FzfLua helptags<CR>", desc = "Help Tags" },
     { "<leader>sm", "<cmd>FzfLua manpages<CR>", desc = "Man Pages" },
     { "<leader>sc", "<cmd>FzfLua command_history<CR>", desc = "Command History" },
