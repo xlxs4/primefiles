@@ -17,7 +17,8 @@ Layout
   fi
   ```
 
-- man pages: `$HOME/.local/share/man` (also update `$MANPATH`)
+- man pages: `$HOME/.local/share/man`
+- no need to set `$MANPATH`, might have to run `mandb` for `apropos`
 
 font
 - Grab Commit Mono from https://commitmono.com/
