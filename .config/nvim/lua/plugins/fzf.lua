@@ -7,7 +7,8 @@ return {
   keys = {
     -- find
     { "<leader>fb", "<cmd>FzfLua buffers<CR>", desc = "Find Buffers" },
-    { "<leader>ft", "<cmd>FzfLua tabs<CR>", desc = "Find Tabs" },
+    { "<leader>ft", "<cmd>FzfLua tags<CR>", desc = "Find Tags" },
+    { "<leader>ftt", "<cmd>FzfLua tabs<CR>", desc = "Find Tabs" },
     { "<leader>ff", "<cmd>FzfLua files<CR>", desc = "Find Files" },
     { "<leader>fo", "<cmd>FzfLua oldfiles<CR>", desc = "Recent" },
     -- search
