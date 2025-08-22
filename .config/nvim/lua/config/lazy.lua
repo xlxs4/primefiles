@@ -67,17 +67,17 @@ require("lazy").setup({
       cmd = "⌘",
       config = "🛠",
       event = "📅",
+      favorite = "⭐",
       ft = "📂",
       init = "⚙",
+      import = "📥",
       keys = "🗝",
+      lazy = "💤 ",
       plugin = "🔌",
       runtime = "💻",
-
       require = "🌙",
       source = "📄",
       start = "🚀",
-      task = "📌",
-      lazy = "💤 ",
     },
   }
 })
