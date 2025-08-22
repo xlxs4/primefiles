@@ -2,9 +2,11 @@ return {
   "stevearc/oil.nvim",
   lazy = false,
   opts = {
+    columns = { },
     view_options = {
       show_hidden = true,
     },
+    skip_confirm_for_simple_edits = true,
   },
   keys = {
     { "<leader>o", "<cmd>Oil<CR>", desc = "Buffer-like Explorer (oil)" },
