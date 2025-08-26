@@ -400,3 +400,12 @@ killall gpg-agent
 
 Consider installing Rosetta
 
+### Language servers
+
+#### Lua
+
+- install [`lua_ls`](https://luals.github.io/#neovim-install)
+  - brew advantages: https://github.com/LuaLS/lua-language-server/issues/3122
+  - brew disadvantages: https://github.com/LuaLS/lua-language-server/issues/3172
+- make sure it's available from `PATH`
+
