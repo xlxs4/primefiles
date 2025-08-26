@@ -151,6 +151,10 @@ Julia
 - curl -fsSL https://install.julialang.org | sh
 - juliaup up / juliaup ls / juliaup add / juliaup default / juliaup st / juliaup rm
 
+Python
+- curl -fsSL https://astral.sh/uv/install.sh | sh
+- uv python install --default
+
 GPG
 - `export GPG_TTY=$(tty)`
 - Remember to call git config with the key
