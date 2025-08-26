@@ -1,0 +1,40 @@
+" To reload config file, do :action IdeaVim.ReloadVimRc.reload
+" Or open the file through JetBrains IDE and do Ctrl+Shift+O
+
+let mapleader = " "
+
+set notimeout
+
+" Some of the available plugins w/ instructions:
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+
+Plug 'preservim/nerdtree'
+nnoremap <leader>tt :NERDTreeToggle<CR>
+nnoremap <leader>tf :NERDTreeFind<CR>
+
+" sneak must come before quickscope
+Plug 'justinmk/vim-sneak'
+
+" https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope
+set quickscope
+
+let g:qs_highlight_on_keys = ['f', 'F']
+
+" https://plugins.jetbrains.com/plugin/23451-fuzzier
+" -- make sure to grab ripgrep: go to the releases,
+" (https://github.com/BurntSushi/ripgrep), get the executable,
+" put it in ~/.local/bin and add that to PATH
+
+nnoremap <leader>ff :action com.mituuz.fuzzier.Fuzzier<CR>
+nnoremap <leader>sg :action com.mituuz.fuzzier.FuzzyGrep<CR>
+nnoremap <leader>gf :action com.mituuz.fuzzier.FuzzierVCS<CR>
+
+" https://plugins.jetbrains.com/plugin/15976-which-key
+set which-key
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKeyDesc_TreeToggle = "<leader>tt Tree Toggle"
+let g:WhichKeyDesc_TreeFind = "<leader>tf Tree Find File"
+let g:WhichKeyDesc_FindFiles = "<leader>ff Find Files"
+let g:WhichKeyDesc_Grep = "<leader>sg Grep"
+let g:WhichKeyDesc_GitFiles = "<leader>gf Git Files"
+
