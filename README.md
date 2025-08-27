@@ -424,3 +424,7 @@ Consider installing Rosetta
 
 Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
 
+#### Python
+
+- install `ruff`
+
