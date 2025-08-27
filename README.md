@@ -426,5 +426,6 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 
 #### Python
 
-- install `ruff`
+- install `ruff` (`uv tool install ruff@latest`)
+- install `ty` (`uv tool install ty@latest`)
 
