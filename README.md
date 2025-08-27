@@ -147,6 +147,16 @@ Funtoo Keychain (https://www.funtoo.org/Funtoo:Keychain)
 - untar and rename to keychain from keychain.sh, move to path (~/.local/bin/)
 - add "eval `keychain --eval id_ed25519`" in rc file
 
+clang
+For ubuntu/debian:
+- Use the script from https://apt.llvm.org/
+- export `CC` and `CXX`
+- also symlink cc and c++
+
+Rust
+- rustup (https://www.rust-lang.org/tools/install)
+- 
+
 Julia
 - curl -fsSL https://install.julialang.org | sh
 - juliaup up / juliaup ls / juliaup add / juliaup default / juliaup st / juliaup rm
@@ -154,6 +164,8 @@ Julia
 Python
 - curl -fsSL https://astral.sh/uv/install.sh | sh
 - uv python install --default
+- use [`ruff`](https://github.com/astral-sh/ruff) and [`ty`](https://github.com/astral-sh/ty)
+  - [`basedpyright`](https://github.com/DetachHead/basedpyright) is a good LSP alternative until `ty` becomes more stable
 
 GPG
 - `export GPG_TTY=$(tty)`
@@ -407,5 +419,8 @@ Consider installing Rosetta
 - install [`lua_ls`](https://luals.github.io/#neovim-install)
   - brew advantages: https://github.com/LuaLS/lua-language-server/issues/3122
   - brew disadvantages: https://github.com/LuaLS/lua-language-server/issues/3172
+  - can put the files to `~/.local/share` and symlink the executable to `~/.local/bin`
 - make sure it's available from `PATH`
+
+Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
 
