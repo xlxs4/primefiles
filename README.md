@@ -162,8 +162,9 @@ Julia
 - juliaup up / juliaup ls / juliaup add / juliaup default / juliaup st / juliaup rm
 
 Python
-- curl -fsSL https://astral.sh/uv/install.sh | sh
-- uv python install --default
+- install `uv`: curl -fsSL https://astral.sh/uv/install.sh | sh
+  - [completions](https://docs.astral.sh/uv/getting-started/installation/#shell-autocompletion)
+- `uv python install --default`
 - use [`ruff`](https://github.com/astral-sh/ruff) and [`ty`](https://github.com/astral-sh/ty)
   - [`basedpyright`](https://github.com/DetachHead/basedpyright) is a good LSP alternative until `ty` becomes more stable
 
