@@ -430,3 +430,7 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 - install `ruff` (`uv tool install ruff@latest`)
 - install `ty` (`uv tool install ty@latest`)
 
+#### Julia
+
+- `julia --project=@nvim-lspconfig -e 'Using Pkg; Pkg.add("LanguageServer")'
+
