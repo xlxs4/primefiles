@@ -6,7 +6,7 @@ return {
     {
       "<leader>;",
       function()
-        require("conform").format({ async = true })
+        require("conform").format()
       end,
       mode = "",
       desc = "Format buffer",
@@ -15,8 +15,13 @@ return {
   ---@module "conform"
   ---@type conform.setupOpts
   opts = {
+    default_format_opts = {
+      timeout_ms = 3000,
+      async = false,
+      quiet = false,
+      lsp_format = "fallback",
+    },
     formatters_by_ft = {
-      lua = { lsp_format = "fallback" },
       julia = { "runic" },
       python = {
         "ruff_fix",
