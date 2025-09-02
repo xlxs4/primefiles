@@ -438,3 +438,9 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 - `julia --project=@nvim-lspconfig -e 'Using Pkg; Pkg.add("LanguageServer")'
 - to have the LSP pick up installed packages or dependencies in a Julia project, make sure the project is instantiated
 
+### Formatters
+
+#### Julia
+
+- install `runic` -- commands [here](https://github.com/fredrikekre/Runic.jl?tab=readme-ov-file#quick-start)
+
