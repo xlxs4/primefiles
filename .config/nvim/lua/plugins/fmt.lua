@@ -16,10 +16,13 @@ return {
   ---@type conform.setupOpts
   opts = {
     formatters_by_ft = {
+      lua = { lsp_format = "fallback" },
       julia = { "runic" },
-    },
-    default_format_opts = {
-      lsp_format = "fallback",
+      python = {
+        "ruff_fix",
+        "ruff_format",
+        "ruff_organize_imports"
+      },
     },
   }
 }
