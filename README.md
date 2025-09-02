@@ -167,6 +167,7 @@ Python
 - `uv python install --default`
 - use [`ruff`](https://github.com/astral-sh/ruff) and [`ty`](https://github.com/astral-sh/ty)
   - [`basedpyright`](https://github.com/DetachHead/basedpyright) is a good LSP alternative until `ty` becomes more stable
+- `uv tool install scalene`
 
 GPG
 - `export GPG_TTY=$(tty)`
@@ -427,10 +428,13 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 
 #### Python
 
-- install `ruff` (`uv tool install ruff@latest`)
-- install `ty` (`uv tool install ty@latest`)
+- install `ruff` (`uv tool install ruff@latest`) ([nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff))
+- install `ty` (`uv tool install ty@latest`) ([nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ty))
 
 #### Julia
 
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#julials)
+
 - `julia --project=@nvim-lspconfig -e 'Using Pkg; Pkg.add("LanguageServer")'
+- to have the LSP pick up installed packages or dependencies in a Julia project, make sure the project is instantiated
 

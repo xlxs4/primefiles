@@ -34,7 +34,6 @@ return {
           Lua = {}
         }
       })
-      vim.lsp.enable('lua_ls')
 
       vim.lsp.config('ruff', {
         init_options = {
@@ -45,9 +44,12 @@ return {
           }
         }
       })
-      vim.lsp.enable('ruff')
-      vim.lsp.enable('ty')
 
-      vim.lsp.enable("julials")
+      vim.lsp.enable({
+        'lua_ls',
+        'ruff',
+        'ty',
+        'julials',
+      })
     end
   }
