@@ -435,7 +435,7 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 
 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#julials)
 
-- `julia --project=@nvim-lspconfig -e 'Using Pkg; Pkg.add("LanguageServer")'
+- `julia --project=@nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
 - to have the LSP pick up installed packages or dependencies in a Julia project, make sure the project is instantiated
 
 ### Formatters
