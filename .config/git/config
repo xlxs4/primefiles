@@ -1,6 +1,7 @@
 # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 [core]
 	pager = delta
+  excludesFile = "~/.config/git/.gitignore"
 [interactive]
 	diffFilter = delta --color-only
 [delta]

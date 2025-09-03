@@ -47,6 +47,7 @@ return {
 
       vim.lsp.enable({
         'lua_ls',
+        'clangd',
         'ruff',
         'ty',
         'julials',

@@ -391,6 +391,8 @@ Browser Extensions
 - Install [GH CLI](https://cli.github.com/): `brew install gh`
 - Install [Alacritty](https://alacritty.org/)
 
+- If you're on MacOS, consider installing [`coreutils`](https://www.gnu.org/software/coreutils/), for `nproc` and such
+
 - Install stow: `brew install stow`
 - Install wget: `brew install wget`
 - Install tmux: `brew install tmux`
@@ -419,6 +421,8 @@ Consider installing Rosetta
 
 #### Lua
 
+- install [`luarocks`](https://github.com/luarocks/luarocks/blob/main/docs/download.md)
+
 - install [`lua_ls`](https://luals.github.io/#neovim-install)
   - brew advantages: https://github.com/LuaLS/lua-language-server/issues/3122
   - brew disadvantages: https://github.com/LuaLS/lua-language-server/issues/3172
@@ -426,6 +430,13 @@ Consider installing Rosetta
 - make sure it's available from `PATH`
 
 Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
+
+#### C/C++
+
+- install the whole `clang` suite. You'll need the `clangd` LSP ([nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#clangd))
+- you need something to generate the [JSON compilation database](https://clangd.llvm.org/installation#compile_commandsjson). A good default is [bear](https://github.com/rizsotto/Bear). Maybe you like [compiledb](https://github.com/nickdiego/compiledb)/[compiledb-go](https://github.com/fcying/compiledb-go?tab=readme-ov-file) more
+- `bear -- <your-build-command>`
+    - `compile_commands.json` should be in the root of the source tree. If not, symlink it
 
 #### Python
 
