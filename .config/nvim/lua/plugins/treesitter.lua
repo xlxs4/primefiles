@@ -5,17 +5,17 @@ return {
   version = false,
   build = ':TSUpdate',
   opts = {
-    ensure_installed = {
-      "c",
-      "lua",
-      "vim",
-      "vimdoc",
-      "markdown",
-      "markdown_inline",
-      "diff",
-      "julia",
-      "python",
-    },
+    -- ensure_installed = {
+    --   "c",
+    --   "lua",
+    --   "vim",
+    --   "vimdoc",
+    --   "markdown",
+    --   "markdown_inline",
+    --   "diff",
+    --   "julia",
+    --   "python",
+    -- },
     auto_install = false,
     highlight = {
       enable = true,
