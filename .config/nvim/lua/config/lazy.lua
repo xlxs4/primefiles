@@ -22,7 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 
 -- Basic
-vim.opt.number = true  		        -- Line numbers
+vim.opt.number = true             -- Line numbers
 vim.opt.relativenumber = true     -- Relative line numbers
 vim.opt.cursorline = true         -- Highlight current line
 vim.opt.scrolloff = 10            -- Maintain 10 lines above/below cursor
@@ -50,6 +50,17 @@ vim.opt.colorcolumn = "100"       -- Show column at 100 characters
 vim.opt.showmatch = true          -- Highlight matching brackets
 vim.opt.matchtime = 2             -- How long to show matching bracket
 vim.opt.cmdheight = 1             -- Command line height
+
+-- More natural split directions
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- Auto-resize splits when terminal window changes size
+-- (e.g., when splitting or zooming with tmux)
+vim.api.nvim_create_autocmd( { "VimResized" }, { pattern = "*", command = "wincmd = " } )
+
+-- Mappings
+vim.keymap.set("i", "jk", "<Esc>")
 
 -- Leader
 vim.g.mapleader = " "
