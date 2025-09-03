@@ -5,17 +5,25 @@ return {
   version = false,
   build = ':TSUpdate',
   opts = {
-    highlight = { enable = true },
-    indent = { enable = true },
     ensure_installed = {
       "c",
+      "lua",
+      "vim",
+      "vimdoc",
+      "markdown",
+      "markdown_inline",
       "diff",
       "julia",
-      "lua",
       "python",
+    },
+    auto_install = false,
+    highlight = {
+      enable = true,
+      additional_vim_regex_highlighting = false,
     },
     incremental_selection = {
       enable = true,
     },
+    indent = { enable = true },
   },
 }

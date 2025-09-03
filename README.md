@@ -445,3 +445,9 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 
 - install `runic` -- commands [here](https://github.com/fredrikekre/Runic.jl?tab=readme-ov-file#quick-start)
 
+### Treesitter
+
+Apparently (?) the new version of treesitter also requires the tree-sitter CLI. Refer to:
+- The requirements: https://github.com/nvim-treesitter/nvim-treesitter/tree/main?tab=readme-ov-file#requirements
+- Install the CLI using `cargo`: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md#installation
+
