@@ -1,14 +1,6 @@
 # Modus Vivendi theme for Yazi (Minimal)
 # Based on Protesilaos Stavrou's Modus Vivendi theme for Emacs
 
-# No icons: https://yazi-rs.github.io/docs/faq/#dont-like-nerd-fonts
-[icon]
-globs = []
-dirs = []
-files = []
-exts = []
-conds = []
-
 [status]
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }

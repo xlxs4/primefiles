@@ -10,7 +10,7 @@ LC_CTYPE = "en_US.UTF-8"
 size = 12
 
 [font.normal]
-family = "CommitMono"
+family = "CommitMono Nerd Font"
 
 # NOTE: MacOS only, for mapping option to meta key
 # [window]

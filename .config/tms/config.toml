@@ -1,7 +1,6 @@
 bookmarks = [
     ".",
-    "/home/xlxs4",
-    "primefiles/",
+    "~/primefiles/",
 ]
 
 [[search_dirs]]

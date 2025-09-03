@@ -21,9 +21,9 @@ Layout
 - no need to set `$MANPATH`, might have to run `mandb` for `apropos`
 
 font
-- Grab Commit Mono from https://commitmono.com/
+- Grab Commit Mono nerd font from https://github.com/ryanoasis/nerd-fonts/releases/
 - Unpack fonts to `~/.local/share/fonts`
-- `fc-cache -f- v`
+- `fc-cache -fv`
 
 theme
 - modus (vivendi) from Prot -- https://protesilaos.com/emacs/modus-themes
@@ -78,6 +78,7 @@ jq
 
 tms
 - https://github.com/jrmoulton/tmux-sessionizer/releases/download/v0.4.5/tmux-sessionizer-x86_64-unknown-linux-musl.tar.xz
+- note that you can do `tms bookmark <dir>`
 
 yazi
 - https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-unknown-linux-musl.zip 
