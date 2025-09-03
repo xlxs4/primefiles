@@ -62,23 +62,5 @@ require("lazy").setup({
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
-  ui = {
-    icons = {
-      cmd = "⌘",
-      config = "🛠",
-      event = "📅",
-      favorite = "⭐",
-      ft = "📂",
-      init = "⚙",
-      import = "📥",
-      keys = "🗝",
-      lazy = "💤 ",
-      plugin = "🔌",
-      runtime = "💻",
-      require = "🌙",
-      source = "📄",
-      start = "🚀",
-    },
-  }
 })
 
