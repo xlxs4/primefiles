@@ -4,7 +4,14 @@ return {
   opts = {
     preset = "modern",
     spec = {
+      { "<leader>d", group = "dap" },
+      { "<leader>f", group = "find" },
+      { "<leader>s", group = "search" },
+      { "<leader>g", group = "git" },
+      { "<leader>l", group = "lsp" },
+      { "<leader>a", group = "aerial" },
       { "<leader>o", group = "overseer" },
+      { "<leader>t", group = "tree" },
     },
   },
   keys = {
