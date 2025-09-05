@@ -1,5 +1,8 @@
 return {
   "mfussenegger/nvim-dap",
+  opts = function()
+    require("overseer").enable_dap()
+  end,
   keys = {
     {
       "<leader>dB",
@@ -76,6 +79,5 @@ return {
       function() require("dap").terminate() end,
       desc = "Terminate"
     },
-  },
-  opts = {}
+  }
 }

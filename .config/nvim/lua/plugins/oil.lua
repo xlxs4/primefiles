@@ -14,6 +14,6 @@ return {
     skip_confirm_for_simple_edits = true,
   },
   keys = {
-    { "<leader>o", "<cmd>Oil<CR>", desc = "Buffer-like Explorer (oil)" },
+    { "<leader>O", "<cmd>Oil<CR>", desc = "Buffer-like Explorer (oil)" },
   },
 }
