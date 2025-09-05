@@ -5,6 +5,7 @@ return {
     theme = "modus-vivendi",
     sections = {
       lualine_x = { "aerial" },
+      lualine_y = { "overseer" },
     },
     extensions = {
       "aerial",
