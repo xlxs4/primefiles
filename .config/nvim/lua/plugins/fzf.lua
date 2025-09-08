@@ -15,8 +15,9 @@ return {
       desc = "Find Definitions (Aerial)"
     },
     { "<leader>fb",  "<cmd>FzfLua buffers<CR>",              desc = "Find Buffers" },
-    { "<leader>ft",  "<cmd>FzfLua tags<CR>",                 desc = "Find Tags" },
-    { "<leader>ftt", "<cmd>FzfLua tabs<CR>",                 desc = "Find Tabs" },
+    { "<leader>fc",  "<cmd>FzfLua grep_cword<CR>",           desc = "Find Current Word" },
+    { "<leader>ftg", "<cmd>FzfLua tags<CR>",                 desc = "Find Tags" },
+    { "<leader>fta", "<cmd>FzfLua tabs<CR>",                 desc = "Find Tabs" },
     { "<leader>ff",  "<cmd>FzfLua files<CR>",                desc = "Find Files" },
     { "<leader>fo",  "<cmd>FzfLua oldfiles<CR>",             desc = "Recent" },
     { "<leader>fp",  "<cmd>FzfLua global<CR>",               desc = "Fuzzy Find Global" },
@@ -28,6 +29,7 @@ return {
     { "<leader>sh",  "<cmd>FzfLua helptags<CR>",             desc = "Help Tags" },
     { "<leader>sm",  "<cmd>FzfLua manpages<CR>",             desc = "Man Pages" },
     { "<leader>sc",  "<cmd>FzfLua command_history<CR>",      desc = "Command History" },
+    { "<leader>st",  "<cmd>FzfLua tagstack<CR>",             desc = "Tagstack" },
     -- git
     { "<leader>gf",  "<cmd>FzfLua git_files<CR>",            desc = "Git Files" },
     { "<leader>gs",  "<cmd>FzfLua git_status<CR>",           desc = "Git Status" },
