@@ -10,6 +10,7 @@ return {
       { "<leader>g", group = "git" },
       { "<leader>l", group = "lsp" },
       { "<leader>a", group = "aerial" },
+      { "<leader>b", group = "bufferline" },
       { "<leader>o", group = "overseer" },
       { "<leader>t", group = "tree" },
     },
