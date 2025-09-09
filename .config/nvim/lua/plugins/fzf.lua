@@ -6,6 +6,10 @@ return {
   cmd = "FzfLua",
   opts = {
     "hide",
+    fzf_opts = { ["--cycle"] = true },
+    winopts = {
+      preview = { default = "bat_native" }
+    }
   },
   keys = {
     -- find
@@ -14,8 +18,14 @@ return {
       function() require("aerial").fzf_lua_picker() end,
       desc = "Find Definitions (Aerial)"
     },
-    { "<leader>fb",  "<cmd>FzfLua buffers<CR>",              desc = "Find Buffers" },
-    { "<leader>fc",  "<cmd>FzfLua grep_cword<CR>",           desc = "Find Current Word" },
+    { "<leader>fb", "<cmd>FzfLua buffers<CR>",    desc = "Find Buffers" },
+    { "<leader>fc", "<cmd>FzfLua grep_cword<CR>", desc = "Find Current Word" },
+    {
+      "<leader>fv",
+      mode = { "n", "o", "x" },
+      "<cmd>FzfLua grep_visual<CR>",
+      desc = "Find Selection"
+    },
     { "<leader>ftg", "<cmd>FzfLua tags<CR>",                 desc = "Find Tags" },
     { "<leader>fta", "<cmd>FzfLua tabs<CR>",                 desc = "Find Tabs" },
     { "<leader>ff",  "<cmd>FzfLua files<CR>",                desc = "Find Files" },
@@ -55,10 +65,30 @@ return {
       "<cmd>FzfLua lsp_workspace_diagnostics<CR>",
       desc = "LSP Diagnostics (Project)"
     },
-    { "<leader>lr", "<cmd>FzfLua lsp_references<CR>",      desc = "LSP References" },
-    { "<leader>lf", "<cmd>FzfLua lsp_definitions<CR>",     desc = "LSP Definitions" },
-    { "<leader>lc", "<cmd>FzfLua lsp_declarations<CR>",    desc = "LSP Declarations" },
-    { "<leader>lt", "<cmd>FzfLua lsp_typedefs<CR>",        desc = "LSP Type Definitions" },
-    { "<leader>li", "<cmd>FzfLua lsp_implementations<CR>", desc = "LSP Implementations" },
+    {
+      "<leader>lr",
+      "<cmd>FzfLua lsp_references jump1=true ignore_current_line=true<CR>",
+      desc = "LSP References"
+    },
+    {
+      "<leader>lf",
+      "<cmd>FzfLua lsp_definitions jump1=true ignore_current_line=true<CR>",
+      desc = "LSP Definitions"
+    },
+    {
+      "<leader>lc",
+      "<cmd>FzfLua lsp_declarations jump1=true ignore_current_line=true<CR>",
+      desc = "LSP Declarations"
+    },
+    {
+      "<leader>lt",
+      "<cmd>FzfLua lsp_typedefs jump1=true ignore_current_line=true<CR>",
+      desc = "LSP Type Definitions"
+    },
+    {
+      "<leader>li",
+      "<cmd>FzfLua lsp_implementations jump1=true ignore_current_line=true<CR>",
+      desc = "LSP Implementations"
+    },
   },
 }
