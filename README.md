@@ -54,6 +54,9 @@ stow \
 strace
 ```
 
+keychain (Funtoo)
+- https://github.com/danielrobbins/keychain/releases
+
 ripgrep
 - `wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz`
 - `tar -xzf ripgrep`
