@@ -327,6 +327,15 @@ MacOS
   eval "$(/opt/homebrew/bin/brew shellenv)"
   ```
 - Install Zen Browser: https://zen-browser.app/download/
+  - Settings -> Keyboard shortcuts:
+    - New Tab: Ctrl+J
+    - Close Tab: Ctrl+K
+    - Go Back: Ctrl+H
+    - Go Forward: Ctrl+L
+    - Toggle sidebar's width: Ctrl+;
+    - Toggle Split View Vertical: Ctrl+Cmd+J
+    - Close Split View: Ctrl+Cmd+K
+    - Usual remaps, i.e., Cmd+R -> Ctrl+R for reload
 
 - Consider installing BetterDisplay: https://github.com/waydabber/BetterDisplay
 
