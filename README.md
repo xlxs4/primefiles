@@ -320,6 +320,10 @@ sparseVhd=true
 
 MacOS
 
+- Settings -> Keyboard -> Keyboard Shortcuts -> Input Sources:
+  - Select next source in input sources menu -> OFF
+  - Select the previous input source -> Option+Space (! to avoid conflict with tmux prefix)
+
 - System Settings -> Appearance -> Dark
 - Install Xcode command tools -- needed for UNIX dev: `sudo xcode-select --install`
 - install Homebrew: https://brew.sh
