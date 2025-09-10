@@ -79,6 +79,9 @@ fd
 jq
 - https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-linux-amd64
 
+tmux
+- install tpm: https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation
+
 tms
 - https://github.com/jrmoulton/tmux-sessionizer/releases/download/v0.4.5/tmux-sessionizer-x86_64-unknown-linux-musl.tar.xz
 - note that you can do `tms bookmark <dir>`
