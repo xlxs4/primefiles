@@ -30,3 +30,10 @@ function y() {
   rm -f -- "$tmp"
 }
 
+source ~/.cargo/env
+
+path=('/Users/xlxs4/.juliaup/bin' $path)
+export PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
