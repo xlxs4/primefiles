@@ -4,13 +4,7 @@ return {
   opts = {
     preset = "modern",
     spec = {
-      { "<leader>jk", "<cmd>wq<CR>",       desc = "Save and Quit" },
-      { "<leader>jK", "<cmd>wqa<CR>",      desc = "Save and Quit All" },
-      { "<leader>jl", "<cmd>q<CR>",        desc = "Quit" },
-      { "<leader>jL", "<cmd>qa<CR>",       desc = "Quit All" },
-      { "<leader>j;", "<cmd>bd<CR>",       desc = "Delete buffer" },
       -- Groups
-      { "<leader>j",  group = "quick motions" },
       { "<leader>d",  group = "dap" },
       { "<leader>f",  group = "find" },
       { "<leader>s",  group = "search" },
