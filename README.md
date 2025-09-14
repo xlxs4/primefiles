@@ -134,6 +134,9 @@ GitHub CLI
 - `gh auth login`
 - `cd && gh repo clone xlxs4/primefiles`
 
+[Spotify player TUI](https://github.com/aome510/spotify-player)
+- `brew install spotify_player`
+
 Dotfiles management
 - `cd primefiles && stow .`
 - TODO: consider using [`--dotfiles`](https://www.gnu.org/software/stow/manual/stow.html)
@@ -162,7 +165,6 @@ For ubuntu/debian:
 
 Rust
 - rustup (https://www.rust-lang.org/tools/install)
-- 
 
 Julia
 - curl -fsSL https://install.julialang.org | sh
