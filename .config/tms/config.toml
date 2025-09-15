@@ -3,6 +3,10 @@ bookmarks = [
     "~/primefiles/",
 ]
 
+# https://github.com/jrmoulton/tmux-sessionizer/blob/128f6bbb71b983a84447ed48a9a91086c4504c87/src/cli.rs
 [[search_dirs]]
 path = "~/gh"
 depth = 1
+
+[[default_session]]
+"~/primefiles/"
