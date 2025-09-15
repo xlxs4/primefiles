@@ -134,8 +134,9 @@ GitHub CLI
 - `gh auth login`
 - `cd && gh repo clone xlxs4/primefiles`
 
-[Spotify player TUI](https://github.com/aome510/spotify-player)
-- `brew install spotify_player`
+Spotify
+- [Spotify player TUI](https://github.com/aome510/spotify-player)
+- check installation docs for dependencies
 
 Dotfiles management
 - `cd primefiles && stow .`
