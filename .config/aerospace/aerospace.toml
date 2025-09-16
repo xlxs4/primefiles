@@ -76,10 +76,6 @@ if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace 8'
-
-[[on-window-detected]]
 if.app-id = 'com.bitwarden.desktop'
 run = 'move-node-to-workspace 9'
 
