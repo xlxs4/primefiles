@@ -54,6 +54,12 @@ stow \
 strace
 ```
 
+starship
+- https://github.com/starship/starship?tab=readme-ov-file#-installation
+
+zsh
+- https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default
+
 keychain (Funtoo)
 - https://github.com/danielrobbins/keychain/releases
 
