@@ -28,7 +28,7 @@ source "$HOME/.local/share/bob/env/env.sh"
 
 source ~/.cargo/env
 
-path=('/Users/xlxs4/.juliaup/bin' $path)
+path=('/home/xlxs4/.juliaup/bin' $path)
 export PATH
 
 export NVM_DIR="$HOME/.nvm"
