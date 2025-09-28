@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-dap",
+  config = function () end,
   opts = function()
     require("overseer").enable_dap()
   end,

@@ -54,6 +54,13 @@ stow \
 strace
 ```
 
+codelldb
+- https://github.com/vadimcn/codelldb
+- `unzip` the `.vsix` file, binary is in `extension/adapter/codelldb`
+    - `mkdir -p ~/.local/share/codelldb`
+    - `mv extension ~/.local/share/codelldb/`
+    - `ln -s ~/.local/share/codelldb/extension/adapter/codelldb ~/.local/bin/codelldb`
+
 starship
 - https://github.com/starship/starship?tab=readme-ov-file#-installation
 
@@ -172,6 +179,7 @@ For ubuntu/debian:
 
 Rust
 - rustup (https://www.rust-lang.org/tools/install)
+- rust-analyzer (`rustup component add rust-analyzer`)
 
 Julia
 - curl -fsSL https://install.julialang.org | sh
@@ -478,6 +486,10 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 - `julia --project=@nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
 - to have the LSP pick up installed packages or dependencies in a Julia project, make sure the project is instantiated
 
+#### Rust
+
+- [rustaceanvim](https://github.com/mrcjkb/rustaceanvim) takes care of things
+
 ### Formatters
 
 #### Julia
@@ -486,7 +498,7 @@ Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=
 
 ### Treesitter
 
-Apparently (?) the new version of treesitter also requires the tree-sitter CLI. Refer to:
+The new version of treesitter also requires the tree-sitter CLI. Refer to:
 - The requirements: https://github.com/nvim-treesitter/nvim-treesitter/tree/main?tab=readme-ov-file#requirements
 - Install the CLI using `cargo`: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md#installation
 
