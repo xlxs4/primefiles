@@ -5,6 +5,22 @@ return {
   },
   version = "*",
   lazy = false,
+  config = function(_, opts)
+    local api = require("nvim-tree.api")
+    vim.api.nvim_create_augroup("NvimTreeResize", {
+      clear = true,
+    })
+    vim.api.nvim_create_autocmd({ "VimResized", "WinResized" }, {
+      group = "NvimTreeResize",
+      callback = function()
+        local winid = api.tree.winid()
+        if (winid) then
+          api.tree.reload()
+        end
+      end
+    })
+    require("nvim-tree").setup(opts)
+  end,
   opts = {
     view = {
       float = {
@@ -54,7 +70,13 @@ return {
       end
 
       local function opts(desc)
-        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        return {
+          desc = "nvim-tree: " .. desc,
+          buffer = bufnr,
+          noremap = true,
+          silent = true,
+          nowait = true
+        }
       end
 
       api.config.mappings.default_on_attach(bufnr)
