@@ -10,10 +10,19 @@ return {
     -- to be public facing:
     -- https://github.com/nvim-tree/nvim-tree.lua/wiki/Recipes#caution-api-and-internal-modules
     local api = require("nvim-tree.api")
+    -- Refresh nvim-tree upon `auto-session` session restore
+    vim.api.nvim_create_autocmd({ "BufEnter" }, {
+      pattern = "NvimTree*",
+      callback = function()
+        if not api.tree.is_visible() then
+          api.tree.open()
+        end
+      end,
+    })
+    -- Automatically resize the floating window when Neovim window size changes
     vim.api.nvim_create_augroup("NvimTreeResize", {
       clear = true,
     })
-    -- Automatically resize the floating window when Neovim window size changes
     vim.api.nvim_create_autocmd({ "VimResized", "WinResized" }, {
       group = "NvimTreeResize",
       callback = function()
