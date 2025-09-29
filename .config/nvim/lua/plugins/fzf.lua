@@ -56,6 +56,11 @@ return {
       desc = "LSP Symbols (Project)"
     },
     {
+      "<leader>la",
+      function() require("aerial").fzf_lua_picker() end,
+      desc = "LSP Symbols (Aerial)"
+    },
+    {
       "<leader>ld",
       "<cmd>FzfLua lsp_document_diagnostics<CR>",
       desc = "LSP Diagnostics (Buffer)"

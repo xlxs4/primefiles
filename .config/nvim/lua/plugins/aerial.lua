@@ -5,7 +5,4 @@ return {
     'nvim-tree/nvim-web-devicons'
   },
   opts = {},
-  keys = {
-    { "<leader>at", "<cmd>AerialToggle<CR>", desc = "Aerial Toggle" },
-  }
 }
