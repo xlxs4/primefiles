@@ -6,13 +6,18 @@ return {
   version = "*",
   lazy = false,
   config = function(_, opts)
+    -- NOTE: `nvim-tree.api` is the public API, other modules are not meant
+    -- to be public facing:
+    -- https://github.com/nvim-tree/nvim-tree.lua/wiki/Recipes#caution-api-and-internal-modules
     local api = require("nvim-tree.api")
     vim.api.nvim_create_augroup("NvimTreeResize", {
       clear = true,
     })
+    -- Automatically resize the floating window when Neovim window size changes
     vim.api.nvim_create_autocmd({ "VimResized", "WinResized" }, {
       group = "NvimTreeResize",
       callback = function()
+        -- Get the nvim-tree window ID
         local winid = api.tree.winid()
         if (winid) then
           api.tree.reload()
@@ -25,6 +30,7 @@ return {
     view = {
       float = {
         enable = true,
+        -- Move floating tree to center, make it prettier
         open_win_config = function()
           local screen_w = vim.opt.columns:get()
           local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
@@ -52,20 +58,27 @@ return {
       local function edit_or_open()
         local node = api.tree.get_node_under_cursor()
         if node.nodes ~= nil then
+          -- Expand or collapse a folder
           api.node.open.edit()
         else
+          -- Open file
           api.node.open.edit()
+          -- Close the tree if file was opened
           api.tree.close()
         end
       end
 
+      -- Open as vsplit on current mode
       local function vsplit_preview()
         local node = api.tree.get_node_under_cursor()
         if node.nodes ~= nil then
+          -- Expand or collapse folder
           api.node.open.edit()
         else
+          -- Open file as vsplit
           api.node.open.vertical()
         end
+        -- Finally, refocus on tree if focus was lost
         api.tree.focus()
       end
 
@@ -79,8 +92,10 @@ return {
         }
       end
 
+      -- :h nvim-tree-mappings
       api.config.mappings.default_on_attach(bufnr)
 
+      -- Set HJKL bindings in nvim-tree buffer for homerow navigation
       vim.keymap.set("n", "l", edit_or_open, opts("Edit Or Open"))
       vim.keymap.set("n", "L", vsplit_preview, opts("Vsplit Preview"))
       vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
