@@ -65,6 +65,21 @@ vim.api.nvim_create_autocmd({ "VimResized" }, { pattern = "*", command = "wincmd
 -- Mappings
 vim.keymap.set("i", "jk", "<Esc>")
 
+-- Temporarily enable lazy redraw to avoid flicker
+local function lazykeys(keys)
+  keys = vim.api.nvim_replace_termcodes(keys, true, false, true)
+
+  return function()
+    local old = vim.o.lazyredraw
+    vim.o.lazyredraw = true
+    vim.api.nvim_feedkeys(keys, 'nx', false)
+    vim.o.lazyredraw = old
+  end
+end
+
+vim.keymap.set('n', '<c-u>', lazykeys('<c-u>zz'), { desc = 'Scroll up half screen' })
+vim.keymap.set('n', '<c-d>', lazykeys('<c-d>zz'), { desc = 'Scroll down half screen' })
+
 -- Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
