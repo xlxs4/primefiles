@@ -13,11 +13,6 @@ return {
   },
   keys = {
     -- find
-    {
-      "<leader>fa",
-      function() require("aerial").fzf_lua_picker() end,
-      desc = "Find Definitions (Aerial)"
-    },
     { "<leader>fb", "<cmd>FzfLua buffers<CR>",    desc = "Find Buffers" },
     { "<leader>fc", "<cmd>FzfLua grep_cword<CR>", desc = "Find Current Word" },
     {
@@ -57,7 +52,7 @@ return {
       desc = "LSP Symbols (Project)"
     },
     {
-      "<leader>la",
+      "<leader>l;",
       function() require("aerial").fzf_lua_picker() end,
       desc = "LSP Symbols (Aerial)"
     },
