@@ -45,14 +45,14 @@ return {
     { "<leader>gbl", "<cmd>FzfLua git_blame<CR>",            desc = "Git Blame (Buffer)" },
     { "<leader>gbb", "<cmd>FzfLua git_branches<CR>",         desc = "Git Branches" },
     -- LSP
-    { "<leader>ll",  "<cmd>FzfLua lsp_document_symbols<CR>", desc = "LSP Symbols (Buffer)" },
+    { "<leader>ls",  "<cmd>FzfLua lsp_document_symbols<CR>", desc = "LSP Symbols (Buffer)" },
     {
-      "<leader>lL",
+      "<leader>lS",
       "<cmd>FzfLua lsp_live_workspace_symbols<CR>",
       desc = "LSP Symbols (Project)"
     },
     {
-      "<leader>l;",
+      "<leader>ll",
       function() require("aerial").fzf_lua_picker() end,
       desc = "LSP Symbols (Aerial)"
     },
