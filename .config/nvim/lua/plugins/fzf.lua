@@ -40,6 +40,7 @@ return {
     { "<leader>sm",  "<cmd>FzfLua manpages<CR>",             desc = "Man Pages" },
     { "<leader>sc",  "<cmd>FzfLua command_history<CR>",      desc = "Command History" },
     { "<leader>st",  "<cmd>FzfLua tagstack<CR>",             desc = "Tagstack" },
+    { "<leader>sj",  "<cmd>FzfLua jumps<CR>",                desc = "Jump List" },
     -- git
     { "<leader>gf",  "<cmd>FzfLua git_files<CR>",            desc = "Git Files" },
     { "<leader>gs",  "<cmd>FzfLua git_status<CR>",           desc = "Git Status" },
