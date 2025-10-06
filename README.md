@@ -458,14 +458,7 @@ Consider installing Rosetta
 #### Lua
 
 - install [`luarocks`](https://github.com/luarocks/luarocks/blob/main/docs/download.md)
-
-- install [`lua_ls`](https://luals.github.io/#neovim-install)
-  - brew advantages: https://github.com/LuaLS/lua-language-server/issues/3122
-  - brew disadvantages: https://github.com/LuaLS/lua-language-server/issues/3172
-  - can put the files to `~/.local/share` and symlink the executable to `~/.local/bin`
-- make sure it's available from `PATH`
-
-Alternatively, [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
+- [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
 
 #### C/C++
 
