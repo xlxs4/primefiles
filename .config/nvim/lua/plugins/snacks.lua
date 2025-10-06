@@ -100,7 +100,6 @@ return {
     explorer = {
       replace_netrw = true
     },
-    indent = {},
     input = {},
     layout = {},
     gitbrowse = {},
