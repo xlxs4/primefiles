@@ -57,7 +57,6 @@ return {
     explorer = {
       replace_netrw = true
     },
-    input = {},
     layout = {},
     gitbrowse = {},
     quickfile = {},
