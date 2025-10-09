@@ -2,13 +2,25 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
-    theme = "modus-vivendi",
     sections = {
-      lualine_x = { "aerial" },
-      lualine_y = { "overseer" },
+      lualine_b = {
+        "branch",
+        "diagnostics",
+        "lsp_status"
+      },
+      lualine_c = {
+        "filetype",
+        "filename"
+      },
+      lualine_x = {
+        "fileformat",
+      },
+      lualine_y = {
+        "progress",
+        "overseer"
+      },
     },
     extensions = {
-      "aerial",
       "man",
       "nvim-tree",
       "oil"
