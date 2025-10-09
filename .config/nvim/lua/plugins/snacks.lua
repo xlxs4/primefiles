@@ -29,7 +29,6 @@ return {
     })
   end,
   opts = {
-    animate = {},
     bigfile = {},
     bufdelete = {},
     debug = {},
@@ -54,10 +53,6 @@ return {
         { section = "startup" },
       },
     },
-    explorer = {
-      replace_netrw = true
-    },
-    layout = {},
     gitbrowse = {},
     quickfile = {},
     scope = {},
@@ -65,9 +60,6 @@ return {
     zen = {},
   },
   keys = {
-    -- explorer
-    { "<leader>ee", ":lua Snacks.explorer()<CR>",        desc = "Explorer" },
-    { "<leader>er", ":lua Snacks.explorer.reveal()<CR>", desc = "Reveal in Explorer" },
     -- gitbrowse
     { "<leader>go", ":lua Snacks.gitbrowse()<CR>",       desc = "Open Repo in Browser (Buffer)" },
     -- scope
