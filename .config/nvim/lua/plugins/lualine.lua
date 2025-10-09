@@ -4,8 +4,7 @@ return {
   opts = {
     sections = {
       lualine_b = {
-        "branch",
-        "diagnostics",
+        "branch"
       },
       lualine_c = {
         "filename"
