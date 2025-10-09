@@ -16,3 +16,5 @@ vimcmd_replace_one_symbol = "[ 󱡄 ](#b6a0ff)"
 vimcmd_replace_symbol = "[ 󱡄 ](#b6a0ff)"
 vimcmd_visual_symbol = "[ 󱡄 ](#d0bc00)"
 
+[cmd_duration]
+style = "bold #b6a0ff"
