@@ -6,10 +6,8 @@ return {
       lualine_b = {
         "branch",
         "diagnostics",
-        "lsp_status"
       },
       lualine_c = {
-        "filetype",
         "filename"
       },
       lualine_x = {
