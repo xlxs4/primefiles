@@ -1,14 +1,18 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$cmd_duration\
+$line_break\
+$character
+"""
+
 [character]
-success_symbol = "[󰘧](#2fafff)"
-error_symbol = "[󰘧](#ff5f59)"
-vimcmd_symbol = "[󰘧](#2fafff)"
-vimcmd_replace_one_symbol = "[󰘧](#b6a0ff)"
-vimcmd_replace_symbol = "[󰘧](#b6a0ff)"
-vimcmd_visual_symbol = "[󰘧](#d0bc00)"
-
-[git_status]
-disabled = true
-
-[package]
-disabled = true
+success_symbol = "[ 󱡄 ](#2fafff)"
+error_symbol = "[ 󱡄 ](#ff5f59)"
+vimcmd_symbol = "[ 󱡄 ](#2fafff)"
+vimcmd_replace_one_symbol = "[ 󱡄 ](#b6a0ff)"
+vimcmd_replace_symbol = "[ 󱡄 ](#b6a0ff)"
+vimcmd_visual_symbol = "[ 󱡄 ](#d0bc00)"
 
