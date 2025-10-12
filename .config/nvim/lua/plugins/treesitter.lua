@@ -8,6 +8,7 @@ return {
       "julia",
       "python",
       "rust",
+      "odin",
     })
   end,
   init = function()
@@ -16,6 +17,7 @@ return {
         "julia",
         "python",
         "rust",
+        "odin",
       },
       callback = function()
         vim.treesitter.start()
