@@ -16,7 +16,8 @@ return {
     "OverseerClearCache",
   },
   opts = {
-    dap = false
+    dap = false,
+    templates = { "builtin", "user.odin_build" }
   },
   keys = {
     { "<leader>ow", "<cmd>OverseerToggle<cr>",      desc = "Task list" },
