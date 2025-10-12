@@ -17,7 +17,11 @@ return {
   },
   opts = {
     dap = false,
-    templates = { "builtin", "user.odin_build" }
+    templates = {
+      "builtin",
+      "user.odin_build",
+      "user.odin_build_file"
+    }
   },
   keys = {
     { "<leader>ow", "<cmd>OverseerToggle<cr>",      desc = "Task list" },
