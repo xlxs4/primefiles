@@ -18,6 +18,7 @@ return {
       "ruff",
       "ty",
       "julials",
+      "ols",
     })
   end
 }

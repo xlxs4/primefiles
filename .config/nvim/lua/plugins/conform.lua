@@ -21,6 +21,13 @@ return {
       quiet = false,
       lsp_format = "fallback",
     },
+    formatters = {
+      odinfmt = {
+        command = "odinfmt",
+        args = { "-stdin" },
+        stdin = true,
+      },
+    },
     formatters_by_ft = {
       julia = { "runic" },
       python = {
@@ -28,6 +35,7 @@ return {
         "ruff_format",
         "ruff_organize_imports"
       },
+      odin = { "odinfmt" },
     },
   }
 }
