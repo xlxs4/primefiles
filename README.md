@@ -177,6 +177,17 @@ For ubuntu/debian:
 - export `CC` and `CXX`
 - also symlink cc and c++
 
+Odin
+- https://odin-lang.org/docs/install/#macos
+- Odin currently supports LLVM versions [14,20].
+  That might not be the latest LLVM version available (e.g., through `brew install llvm`).
+  Additionally, to build from source, `make` needs to be able to access `llvm-config`:
+  - `brew install llvm@20`
+  - `LLVM_CONFIG=/opt/homebrew/Cellar/llvm@20/20.1.8/bin/llvm-config make release-native`
+  - `ln -s ~/.local/share/Odin/odin ~/.local/bin/odin`
+  - In order to compile for WASM, Odin calls out to `wasm-ld` for linking.
+    This linker is included in the `lld` formula: `brew install lld`
+
 Rust
 - rustup (https://www.rust-lang.org/tools/install)
 - rust-analyzer (`rustup component add rust-analyzer`)
@@ -482,6 +493,17 @@ Consider installing Rosetta
 #### Rust
 
 - [rustaceanvim](https://github.com/mrcjkb/rustaceanvim) takes care of things
+
+#### Odin
+
+- [ols](https://github.com/DanielGavin/ols)
+- `git clone https://github.com/DanielGavin/ols.git` in `~/.local/share/`
+- `cd ols`
+- `./build.sh`
+- `./odinfmt.sh`
+- `ln -s ~/.local/share/ols/ols ~/.local/bin/ols`
+- `ln -s ~/.local/share/ols/odinfmt ~/.local/bin/odinfmt`
+
 
 ### Formatters
 
