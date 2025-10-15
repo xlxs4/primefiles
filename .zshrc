@@ -28,6 +28,7 @@ source "$HOME/.local/share/bob/env/env.sh"
 
 source ~/.cargo/env
 
+path=('/home/xlxs4/.julia/bin' $path)
 path=('/home/xlxs4/.juliaup/bin' $path)
 export PATH
 
