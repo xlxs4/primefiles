@@ -177,6 +177,12 @@ For ubuntu/debian:
 - export `CC` and `CXX`
 - also symlink cc and c++
 
+CMake
+- https://cmake.org/
+
+Ninja
+- https://github.com/ninja-build/ninja/releases
+
 Odin
 - https://odin-lang.org/docs/install/#macos
 - Odin currently supports LLVM versions [14,20].
