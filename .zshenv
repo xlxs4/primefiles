@@ -32,7 +32,5 @@ if [[ ! -o norcs ]]; then
   # it should not add anything to it if it's already there.
   # The left-most occurrence is kept
   typeset -U path
-
-  . "$HOME/.cargo/env"
 fi
 
