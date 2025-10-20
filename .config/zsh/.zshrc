@@ -36,3 +36,17 @@ eval "$(zoxide init --cmd cd zsh)"
 
 eval "$(starship init zsh)"
 
+# Move the ZSH cache files to XDG_CACHE_HOME
+() {
+  emulate -L zsh
+  local -r cache_dir=${XDG_CACHE_HOME:-$HOME/.cache}/zsh
+  # _store_cache is a completion function -- used to ensure $cache_dir exists
+  autoload -Uz _store_cache compinit
+  # required by _store_cache
+  zstyle ':completion:*' use-cache true
+  zstyle ':completion:*' cache-path $cache_dir/.zcompcache
+  [[ -f $cache_dir/.zcompcache/.make-cache-dir ]] || _store_cache .make-cache-dir
+  # -C skips checks to further speed completion initialization up
+  compinit -C -d $cache_dir/.zcompdump
+}
+
