@@ -1,10 +1,10 @@
 # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 [core]
-	pager = delta
-  excludesFile = "~/.config/git/.gitignore"
+    pager = delta
+    excludesFile = "~/.config/git/.gitignore"
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only
 [delta]
-	navigate = true
+    navigate = true
 [merge]
-	conflictStyle = zdiff3
+    conflictStyle = zdiff3

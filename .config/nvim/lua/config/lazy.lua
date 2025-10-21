@@ -2,17 +2,17 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.uv).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out,                            "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out,                            "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 
 vim.opt.rtp:prepend(lazypath)
@@ -29,9 +29,9 @@ vim.opt.scrolloff = 10        -- Maintain 10 lines above/below cursor
 vim.opt.sidescrolloff = 8     -- Maintain 10 lines left/right of cursor
 
 -- Indentation
-vim.opt.tabstop = 2        -- Tab width
-vim.opt.shiftwidth = 2     -- Indent width
-vim.opt.softtabstop = 2    -- Soft tab stop
+vim.opt.tabstop = 4        -- Tab width
+vim.opt.shiftwidth = 4     -- Indent width
+vim.opt.softtabstop = 4    -- Soft tab stop
 vim.opt.expandtab = true   -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart auto-indenting
 vim.opt.autoindent = true  -- Copy indent from current line
@@ -73,10 +73,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
-  spec = {
-    { import = "plugins" },
+    spec = {
+        { import = "plugins" },
 
-  },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+    },
+    -- automatically check for plugin updates
+    checker = { enabled = true },
 })
