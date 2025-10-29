@@ -54,6 +54,9 @@ stow \
 strace
 ```
 
+gdb
+- https://sourceware.org/gdb/
+
 codelldb
 - https://github.com/vadimcn/codelldb
 - `unzip` the `.vsix` file, binary is in `extension/adapter/codelldb`
