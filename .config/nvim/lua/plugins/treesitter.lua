@@ -9,6 +9,7 @@ return {
             "python",
             "rust",
             "odin",
+            "cpp",
         })
     end,
     init = function()
@@ -18,6 +19,7 @@ return {
                 "python",
                 "rust",
                 "odin",
+                "cpp",
             },
             callback = function()
                 vim.treesitter.start()
