@@ -480,7 +480,9 @@ Consider installing Rosetta
 
 #### Lua
 
-- install [`luarocks`](https://github.com/luarocks/luarocks/blob/main/docs/download.md)
+- NOTE: Nvim requires lua 5.1 -- see `:h lua-compat`
+- first install lua 5.1.X -- instructions [here](https://luarocks.github.io/luarocks/releases/luarocks-3.12.2.tar.gz), for Lua installation instructions see the `INSTALL` file in the downloaded lua source
+- install [`luarocks`](https://github.com/luarocks/luarocks/blob/main/docs/download.md) -- it's important that this is built with Lua 5.1.X
 - [install](https://github.com/EmmyLuaLs/emmylua-analyzer-rust?tab=readme-ov-file#-installation) `emmylua_ls`
 
 #### C/C++
