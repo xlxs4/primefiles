@@ -480,6 +480,7 @@ Consider installing Rosetta
 
 #### Lua
 
+- TODO: I think lazy.nvim manages this on its own, ref https://github.com/folke/lazy.nvim/issues/2086
 - NOTE: Nvim requires lua 5.1 -- see `:h lua-compat`
 - first install lua 5.1.X -- instructions [here](https://github.com/luarocks/luarocks/blob/main/docs/installation_instructions_for_unix.md), for Lua installation instructions see the `INSTALL` file in the downloaded lua source
   - download tar and unpack
