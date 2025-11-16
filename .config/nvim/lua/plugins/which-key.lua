@@ -10,6 +10,7 @@ return {
             { "<leader>s", group = "search" },
             { "<leader>g", group = "git" },
             { "<leader>l", group = "lsp" },
+            { "<leader>j", group = "gitsigns" },
             { "<leader>k", group = "scope" },
             { "<leader>a", group = "aerial" },
             { "<leader>o", group = "overseer" },
