@@ -14,5 +14,5 @@ if [ -d "$HOME/.juliaup/bin" ]; then
     path+=("$HOME/.juliaup/bin")
 fi
 
-eval "$(keychain --eval id_ed25519)"
+eval "$(keychain --eval id_ed25519 --quiet)"
 
