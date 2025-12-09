@@ -17,6 +17,7 @@ return {
             { "<leader>t", group = "tree" },
             { "<leader>w", group = "auto-session" },
             { "<leader>b", group = "bufferline" },
+            { "<leader>e", group = "treesitter" },
         },
     },
     keys = {
