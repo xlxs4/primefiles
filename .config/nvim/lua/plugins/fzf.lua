@@ -13,8 +13,10 @@ return {
     },
     keys = {
         -- find
-        { "<leader>fb", "<cmd>FzfLua buffers<CR>",    desc = "Find Buffers" },
-        { "<leader>fc", "<cmd>FzfLua grep_cword<CR>", desc = "Find Current Word" },
+        { "<leader>fdd",  "<cmd>FzfLua diagnostics_document<CR>",  desc = "Find Diagnostics (Buffer)" },
+        { "<leader>fdw", "<cmd>FzfLua diagnostics_workspace<CR>", desc = "Find Diagnostics" },
+        { "<leader>fb",  "<cmd>FzfLua buffers<CR>",               desc = "Find Buffers" },
+        { "<leader>fc",  "<cmd>FzfLua grep_cword<CR>",            desc = "Find Current Word" },
         {
             "<leader>fv",
             mode = { "n", "o", "x" },
