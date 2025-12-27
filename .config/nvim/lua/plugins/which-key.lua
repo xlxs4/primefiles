@@ -18,6 +18,7 @@ return {
             { "<leader>w", group = "auto-session" },
             { "<leader>b", group = "bufferline" },
             { "<leader>e", group = "treesitter" },
+            { "<leader>q", group = "trouble" },
         },
     },
     keys = {

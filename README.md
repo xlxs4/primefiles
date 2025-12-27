@@ -118,6 +118,8 @@ cloc
 universal-ctags
 - https://github.com/universal-ctags/ctags-nightly-build/releases/download/2025.08.04%2B475a7bc246c22cb6ef1c6659103977a9de544667/uctags-2025.08.04-linux-x86_64.release.tar.gz
 
+Git LFS
+- https://git-lfs.com/
 
 ```bash
 # https://yazi-rs.github.io/docs/quick-start/
@@ -376,27 +378,21 @@ MacOS
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/xlxs4/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
   ```
-- Install Zen Browser: https://zen-browser.app/download/
-  - Settings -> Keyboard shortcuts:
-    - New Tab: Ctrl+J
-    - Close Tab: Ctrl+K
-    - Go Back: Ctrl+H
-    - Go Forward: Ctrl+L
-    - Toggle sidebar's width: Ctrl+;
-    - Toggle Split View Vertical: Ctrl+Cmd+J
-    - Close Split View: Ctrl+Cmd+K
-    - Usual remaps, i.e., Cmd+R -> Ctrl+R for reload
+- Install Firefox
+  - In `about:config`, set `browser.tabs.insertAfterCurrent` to `true`
+  - Settings -> Privacy & Security -> Passwords: uncheck `Ask to save passwords`
 
 - Consider installing BetterDisplay: https://github.com/waydabber/BetterDisplay
 
 Browser Extensions
 - Ublock Origin
 - Dark Reader
-- Bitwarden -- TODO: migrate to desktop/CLI, EU server, and cleanup
+- Bitwarden -- TODO: EU server, and cleanup
 - Kagi
 - Vimium C
 - Enhancer for Youtube
 - Google Scholar Button
+- Refined GitHub: https://github.com/refined-github/refined-github
 
 - System Settings -> Security & Privacy -> FileVault -> Turn On
   - Create a recovery key and do not use my iCloud account
@@ -410,7 +406,7 @@ Browser Extensions
 - System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Click wallpaper to reveal Desktop -> Only in Stage Manager
 - System Settings -> Desktop & Dock -> Desktop & Stage Manager -> Show items -> In Stage Manager
 - System Settings -> Desktop & Dock -> Widgets -> Show Widgets -> In Stage Manager
-- System Settings -> Desktop & Dock -> Default Web Browser -> Change to something other than Safari (Zen)
+- System Settings -> Desktop & Dock -> Default Web Browser -> Change to something other than Safari (Firefox)
 - System Settings -> Desktop & Dock -> Windows -> Prefer tabs when opening documents -- Always
 - System Settings -> Desktop & Dock -> Windows -> Drag windows to screen edges to tile -- OFF
 - System Settings -> Desktop & Dock -> Windows -> Drag windows to menu bar to fill screen -- OFF
@@ -537,3 +533,8 @@ The new version of treesitter also requires the tree-sitter CLI. Refer to:
 - The requirements: https://github.com/nvim-treesitter/nvim-treesitter/tree/main?tab=readme-ov-file#requirements
 - Install the CLI using `cargo`: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md#installation
 
+
+### Vim tricks
+
+- `:grep <term1>`
+- `:cfdo %s/<term1>/<term2>/g (or gc) | update | bd`
