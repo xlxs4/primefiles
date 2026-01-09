@@ -43,7 +43,7 @@ return {
         { "<leader>gs",  "<cmd>FzfLua git_status<CR>",           desc = "Git Status" },
         { "<leader>gd",  "<cmd>FzfLua git_diff<CR>",             desc = "Git Diff" },
         { "<leader>gc",  "<cmd>FzfLua git_commits<CR>",          desc = "Git Commits" },
-        { "<leader>gc",  "<cmd>FzfLua git_hunks<CR>",            desc = "Git Hunks" },
+        { "<leader>gh",  "<cmd>FzfLua git_hunks<CR>",            desc = "Git Hunks" },
         { "<leader>gbc", "<cmd>FzfLua git_bcommits<CR>",         desc = "Git Commits (Buffer)" },
         { "<leader>gbl", "<cmd>FzfLua git_blame<CR>",            desc = "Git Blame (Buffer)" },
         { "<leader>gbb", "<cmd>FzfLua git_branches<CR>",         desc = "Git Branches" },
