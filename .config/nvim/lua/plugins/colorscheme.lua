@@ -1,8 +1,7 @@
 return {
-    "miikanissi/modus-themes.nvim",
-    lazy = false,  -- make sure we load this during startup
+    "p00f/alabaster.nvim",
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-        vim.cmd([[colorscheme modus]])
+        vim.cmd.colorscheme("alabaster")
     end,
 }
