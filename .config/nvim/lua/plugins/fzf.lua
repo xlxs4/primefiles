@@ -1,7 +1,11 @@
+-- TODO: Add more groups for which key
 return {
     "ibhagwan/fzf-lua",
     dependencies = {
         "nvim-tree/nvim-web-devicons",
+        -- TODO: Is there a better way to specify dap?
+        -- Can the keybinds live in dap.lua instead?
+        "mfussenegger/nvim-dap"
     },
     cmd = "FzfLua",
     opts = {
@@ -25,19 +29,22 @@ return {
         },
         { "<leader>ftg", "<cmd>FzfLua tags<CR>",                 desc = "Find Tags" },
         { "<leader>fta", "<cmd>FzfLua tabs<CR>",                 desc = "Find Tabs" },
+        { "<leader>fts", "<cmd>FzfLua tagstack<CR>",             desc = "Tagstack" },
         { "<leader>ff",  "<cmd>FzfLua files<CR>",                desc = "Find Files" },
         { "<leader>fo",  "<cmd>FzfLua oldfiles<CR>",             desc = "Recent" },
         { "<leader>fp",  "<cmd>FzfLua global<CR>",               desc = "Fuzzy Find Global" },
+        { "<leader>fj",  "<cmd>FzfLua jumps<CR>",                desc = "Jump List" },
+        { "<leader>fm",  "<cmd>FzfLua marks<CR>",                desc = "Marks" },
+        { "<leader>fc",  "<cmd>FzfLua changes<CR>",              desc = "Changes" },
+        { "<leader>fu",  "<cmd>FzfLua undotree<CR>",             desc = "History Undo Tree" },
         -- search
-        { "<leader>sb",  "<cmd>FzfLua builtin<CR>",              desc = "Fuzzy Find Commands" },
+        { "<leader>sl",  "<cmd>FzfLua builtin<CR>",              desc = "Fuzzy Find Commands" },
         { "<leader>sr",  "<cmd>FzfLua resume<CR>",               desc = "Fuzzy Find Resume" },
         { "<leader>sg",  "<cmd>FzfLua live_grep_native<CR>",     desc = "Grep" },
         { "<leader>s/",  "<cmd>FzfLua blines<CR>",               desc = "Fuzzy Find Buffer Lines" },
         { "<leader>sh",  "<cmd>FzfLua helptags<CR>",             desc = "Help Tags" },
         { "<leader>sm",  "<cmd>FzfLua manpages<CR>",             desc = "Man Pages" },
         { "<leader>sc",  "<cmd>FzfLua command_history<CR>",      desc = "Command History" },
-        { "<leader>st",  "<cmd>FzfLua tagstack<CR>",             desc = "Tagstack" },
-        { "<leader>sj",  "<cmd>FzfLua jumps<CR>",                desc = "Jump List" },
         -- git
         { "<leader>gf",  "<cmd>FzfLua git_files<CR>",            desc = "Git Files" },
         { "<leader>gs",  "<cmd>FzfLua git_status<CR>",           desc = "Git Status" },
@@ -93,6 +100,31 @@ return {
             "<leader>li",
             "<cmd>FzfLua lsp_implementations jump1=true ignore_current_line=true<CR>",
             desc = "LSP Implementations"
+        },
+        {
+            "<leader>dfj",
+            "<cmd>FzfLua dap_breakpoints<CR>",
+            desc = "Debugger Breakpoints (dap)"
+        },
+        {
+            "<leader>dfk",
+            "<cmd>FzfLua dap_variables<CR>",
+            desc = "Debugger Variables (dap)"
+        },
+        {
+            "<leader>dfl",
+            "<cmd>FzfLua dap_frames<CR>",
+            desc = "Debugger Frames (dap)"
+        },
+        {
+            "<leader>df;",
+            "<cmd>FzfLua dap_configurations<CR>",
+            desc = "Debugger Configurations (dap)"
+        },
+        {
+            "<leader>dfi",
+            "<cmd>FzfLua dap_commands<CR>",
+            desc = "Debugger Commands (dap)"
         },
     },
 }
