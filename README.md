@@ -381,6 +381,7 @@ MacOS
 - Install Firefox
   - In `about:config`, set `browser.tabs.insertAfterCurrent` to `true`
   - Settings -> Privacy & Security -> Passwords: uncheck `Ask to save passwords`
+  - Right click on left sidebar, turn on vertical tabs
 
 - Consider installing BetterDisplay: https://github.com/waydabber/BetterDisplay
 
@@ -393,6 +394,7 @@ Browser Extensions
 - Enhancer for Youtube
 - Google Scholar Button
 - Refined GitHub: https://github.com/refined-github/refined-github
+- LeechBlock NG
 
 - System Settings -> Security & Privacy -> FileVault -> Turn On
   - Create a recovery key and do not use my iCloud account
@@ -418,6 +420,7 @@ Browser Extensions
 - System Settings -> Keyboard -> Key repeat rate -- Fast
 - System Settings -> Keyboard -> Delay until repeat -- Short
 - System Settings -> Keyboard -> Delay until repeat -- Short
+- Disable "Press & Hold": `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
 - System Settings -> Keyboard -> Shortcuts -> Show Spotlight search -- OFF
 - System Settings -> Mouse -> Natural Scrolling -- OFF
 - System Settings -> Sound -> Play sound on startup -- OFF
