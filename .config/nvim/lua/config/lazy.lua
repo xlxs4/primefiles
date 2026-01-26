@@ -107,6 +107,10 @@ vim.keymap.set(
     { desc = 'Toggle Prose' }
 )
 
+-- Enable the *experimental* TUI for messages
+-- https://github.com/neovim/neovim/pull/27855
+require('vim._extui').enable({})
+
 require("lazy").setup({
     spec = {
         { import = "plugins" },
