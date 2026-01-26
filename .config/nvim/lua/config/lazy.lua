@@ -50,6 +50,17 @@ vim.opt.colorcolumn = "100"  -- Show column at 100 characters
 vim.opt.showmatch = true     -- Highlight matching brackets
 vim.opt.matchtime = 2        -- How long to show matching bracket
 vim.opt.cmdheight = 1        -- Command line height
+vim.opt.wrap = false         -- Soft wrap
+vim.opt.linebreak = false    -- Wrap on linebreaks
+vim.opt.listchars = {
+    tab = "→ ",
+    extends = "›",
+    precedes = "‹",
+    nbsp = "␣",
+    trail = "·"
+}
+vim.opt.list = true
+
 
 -- https://github.com/rmagatti/auto-session?tab=readme-ov-file#recommended-sessionoptions-config
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
@@ -62,15 +73,39 @@ vim.opt.splitright = true
 -- (e.g., when splitting or zooming with tmux)
 vim.api.nvim_create_autocmd({ "VimResized" }, { pattern = "*", command = "wincmd = " })
 
+-- Leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 -- Mappings
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set('n', '<c-u>', '<c-u>zz', { desc = 'Scroll up half screen' })
 vim.keymap.set('n', '<c-d>', '<c-d>zz', { desc = 'Scroll down half screen' })
 
--- Leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- Be able to use j and k for vertical movement inside wraps.
+-- We're using v:count so that if we just press j, we move down one
+-- *visual* line, but if we press, e.g., 5j we move down five *logical* lines
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
+vim.keymap.set(
+    'n',
+    '<leader>W',
+    function()
+        local is_on = vim.opt.wrap:get()
+        if not is_on then
+            vim.opt.wrap = true
+            vim.opt.linebreak = true
+            vim.opt.list = false
+        else
+            vim.opt.wrap = false
+            vim.opt.linebreak = false
+            vim.opt.list = true
+        end
+    end,
+    { desc = 'Toggle Prose' }
+)
 
 require("lazy").setup({
     spec = {
