@@ -27,7 +27,13 @@ font
 
 theme
 - modus (vivendi) from Prot -- https://protesilaos.com/emacs/modus-themes
-- for neovim: https://github.com/miikanissi/modus-themes.nvim
+- for neovim: https://github.com/p00f/alabaster.nvim
+- Using a proper color theme for code is very important. Some rules:
+  - Not a lot of visual noise (so, e.g., don't highlight builtins)
+  - Highlight comments and bring them to the forefront instead of hiding them. Comments are the most important part of the code
+  - https://github.com/tonsky/sublime-scheme-alabaster#motivation
+  - Alternatives: Jon Blow's naysayer theme, tsoding gruber darker, Ginger Bill Iris, etc.
+  - Another plus for using a simpler theme is it's easier to tailor and easier to add support for other langs
 - there's a bunch of autogen themes in https://github.com/miikanissi/modus-themes.nvim?tab=readme-ov-file#extras
 - colors can be found in https://github.com/miikanissi/modus-themes.nvim/blob/master/lua/modus-themes/colors.lua
 
