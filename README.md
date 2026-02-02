@@ -144,6 +144,36 @@ mosh
 typst
 - https://github.com/typst/typst
 
+zathura
+- https://github.com/pwmt/zathura
+- If you're on Linux, make sure to install `libseccomp` (https://github.com/seccomp/libseccomp):
+  - Grab the release
+  - decompress
+  - `./configure`
+  - `make`
+  - `make install`
+- Grab the release, then
+- `meson build`
+- `cd build`
+- `ninja`
+- `ninja install`
+- Use the mupdf backend, not poppler. Poppler is bad. To install the mupdf plugin:
+  - Install mupdf: https://mupdf.readthedocs.io/en/1.27.0/guide/install.html#build-on-linux-and-bsd-and-macos
+  - If on MacOS, use `HAVE_GLUT=no`. Also make sure to compile mupdf with `fPIC`
+  - `sudo make HAVE_GLUT=no XCFLAGS='-fPIC' prefix=/usr/local install-libs`
+  - Grab girara: https://pwmt.org/projects/girara/download/
+  - `meson build`
+  - `cd build`
+  - `ninja`
+  - `ninja install`
+  - zathura-pdf-mupdf uses pkg-config to look for "girara", but girara installs as girara-gtk3 on MacOS, so run `ln -s /opt/homebrew/lib/pkgconfig/girara-gtk3.pc /opt/homebrew/lib/pkgconfig/girara.pc`
+  - Now grab zathura-pdf-mupdf from https://github.com/pwmt/zathura-pdf-mupdf, and, similarly:
+  - `meson build`
+  - `cd build`
+  - `ninja`
+  - `ninja install`
+  - You can run `zathura -v` to verify that it finds and loads the plugin
+
 TODO: other useful tools...
 
 lazygit
