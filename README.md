@@ -141,6 +141,9 @@ function y() {
 mosh
 - https://github.com/mobile-shell/mosh
 
+typst
+- https://github.com/typst/typst
+
 TODO: other useful tools...
 
 lazygit
@@ -529,6 +532,9 @@ Consider installing Rosetta
 - `ln -s ~/.local/share/ols/ols ~/.local/bin/ols`
 - `ln -s ~/.local/share/ols/odinfmt ~/.local/bin/odinfmt`
 
+#### Typst
+- [tinymist](https://github.com/Myriad-Dreamin/tinymist)
+- [install](https://myriad-dreamin.github.io/tinymist/frontend/neovim.html) (e.g., using `cargo`)
 
 ### Formatters
 
