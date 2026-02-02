@@ -2,7 +2,7 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-        vim.lsp.config('ruff', {
+        vim.lsp.config("ruff", {
             init_options = {
                 settings = {
                     lint = {
@@ -12,6 +12,16 @@ return {
                 }
             }
         })
+
+        -- Configure tinymist to also use it as a formatter
+        -- https://myriad-dreamin.github.io/tinymist/frontend/neovim.html#label-Formatting
+        vim.lsp.config("tinymist", {
+            settings = {
+                -- The alternative, typstfmt, is deprecated in favor of typstyle
+                formatterMode = "typstyle"
+            }
+        })
+
 
         vim.lsp.enable({
             -- Lua
