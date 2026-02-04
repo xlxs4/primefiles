@@ -152,7 +152,7 @@ zathura
   - `./configure`
   - `make`
   - `make install`
-- Grab the release, then
+- Grab the release, you might need some of the listed depencencies as well. Then:
 - `meson build`
 - `cd build`
 - `ninja`
@@ -167,6 +167,7 @@ zathura
   - `ninja`
   - `ninja install`
   - zathura-pdf-mupdf uses pkg-config to look for "girara", but girara installs as girara-gtk3 on MacOS, so run `ln -s /opt/homebrew/lib/pkgconfig/girara-gtk3.pc /opt/homebrew/lib/pkgconfig/girara.pc`
+  - If you've used homebrew to intall girara, make sure to pin it afterwards: brew pin girara
   - Now grab zathura-pdf-mupdf from https://github.com/pwmt/zathura-pdf-mupdf, and, similarly:
   - `meson build`
   - `cd build`
