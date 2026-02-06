@@ -109,7 +109,9 @@ vim.keymap.set(
 
 -- Enable the *experimental* TUI for messages
 -- https://github.com/neovim/neovim/pull/27855
-require('vim._extui').enable({})
+-- Renamed from _extui to _core.ui2 in
+-- https://github.com/neovim/neovim/commit/bf68ba40a03a19c97454ede293ed289c547b5aaa
+require('vim._core.ui2').enable({})
 
 require("lazy").setup({
     spec = {
