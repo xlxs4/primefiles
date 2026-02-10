@@ -84,8 +84,8 @@ if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-if.app-id = 'com.bitwarden.desktop'
-run = 'move-node-to-workspace 9'
+if.app-id = 'com.canva.affinity'
+run = 'move-node-to-workspace 8'
 
 # TODO: Consider adding key for floating layout
 # TODO: Look into other binding modes and callbacks as needed
