@@ -37,6 +37,7 @@ return {
         { "<leader>fm",  "<cmd>FzfLua marks<CR>",                desc = "Marks" },
         { "<leader>fc",  "<cmd>FzfLua changes<CR>",              desc = "Changes" },
         { "<leader>fu",  "<cmd>FzfLua undotree<CR>",             desc = "History Undo Tree" },
+        { "<leader>fn",  "<cmd>Noice fzf<CR>",                   desc = "Messages History" },
         -- search
         { "<leader>sl",  "<cmd>FzfLua builtin<CR>",              desc = "Fuzzy Find Commands" },
         { "<leader>sr",  "<cmd>FzfLua resume<CR>",               desc = "Fuzzy Find Resume" },
