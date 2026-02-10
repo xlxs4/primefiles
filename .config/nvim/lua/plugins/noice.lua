@@ -17,7 +17,9 @@ return {
         },
         presets = {
             -- Add a border to hover docs and signature help
-            lsp_doc_border = true
+            lsp_doc_border = true,
+            -- Enable an input dialog for inc-rename.nvim
+            inc_rename = true
         }
     },
     dependencies = {
