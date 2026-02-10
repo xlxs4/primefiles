@@ -18,7 +18,8 @@ return {
         vim.lsp.config("tinymist", {
             settings = {
                 -- The alternative, typstfmt, is deprecated in favor of typstyle
-                formatterMode = "typstyle"
+                formatterMode = "typstyle",
+                formatterPrintWidth = 80,
             }
         })
 
