@@ -11,6 +11,8 @@ return {
             "odin",
             "cpp",
             "typst",
+            "regex", -- For noice.nvim cmdline highlighting
+            "bash",  -- For noice.nvim cmdline highlighting
         })
     end,
     init = function()
