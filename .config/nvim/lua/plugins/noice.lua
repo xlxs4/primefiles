@@ -28,6 +28,24 @@ return {
         -- OPTIONAL:
         --   `nvim-notify` is only needed, if you want to use the notification view.
         --   If not available, we use `mini` as the fallback
-        "rcarriga/nvim-notify",
+        {
+            "rcarriga/nvim-notify",
+            config = function()
+                ---@type notify.Config
+                local conf = {
+                    -- No icons
+                    icons = {
+                        DEBUG = "",
+                        ERROR = "",
+                        INFO = "",
+                        TRACE = "",
+                        WARN = "",
+                    },
+                    stages = "static", -- no animations
+                    timeout = 2300,    -- in ms
+                }
+                require("notify").setup(conf)
+            end
+        }
     }
 }
