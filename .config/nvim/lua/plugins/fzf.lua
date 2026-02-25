@@ -11,6 +11,19 @@ return {
     opts = {
         "hide",
         fzf_opts = { ["--cycle"] = true },
+        oldfiles = {
+            -- Include buffers visited in the current session.
+            -- This is handy for using oldfiles to switch between
+            -- commonly used files
+            include_current_session = true,
+        },
+        previewers = {
+            builtin = {
+                -- Ensure that the previewer won't add syntax highlighting
+                -- to files larger than 100KB
+                syntax_limit_b = 1024 * 100, -- 100 KB
+            }
+        },
         winopts = {
             preview = { default = "bat_native" }
         }
