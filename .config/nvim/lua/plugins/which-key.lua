@@ -13,6 +13,7 @@ return {
             { "<leader>j", group = "gitsigns" },
             { "<leader>k", group = "scope" },
             { "<leader>a", group = "aerial" },
+            { "<leader>i", group = "indent" },
             { "<leader>o", group = "overseer" },
             { "<leader>t", group = "tree" },
             { "<leader>w", group = "auto-session" },
