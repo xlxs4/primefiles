@@ -49,7 +49,6 @@ vim.opt.signcolumn = "yes"   -- Always show sign column
 vim.opt.colorcolumn = "100"  -- Show column at 100 characters
 vim.opt.showmatch = true     -- Highlight matching brackets
 vim.opt.matchtime = 2        -- How long to show matching bracket
-vim.opt.cmdheight = 1        -- Command line height
 vim.opt.wrap = false         -- Soft wrap
 vim.opt.linebreak = false    -- Wrap on linebreaks
 vim.opt.listchars = {
