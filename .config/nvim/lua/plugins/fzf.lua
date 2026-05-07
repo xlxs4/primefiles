@@ -19,6 +19,13 @@ return {
     opts = {
         "hide",
         fzf_opts = { ["--cycle"] = true },
+        defaults = {
+            -- Disable all icons across pickers. The defaults table
+            -- (or function) is for "global-picker" defaults
+            git_icons = false,
+            file_icons = false,
+            color_icons = false,
+        },
         oldfiles = {
             -- Include buffers visited in the current session.
             -- This is handy for using oldfiles to switch between
