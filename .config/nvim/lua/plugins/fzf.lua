@@ -8,6 +8,14 @@ return {
         "mfussenegger/nvim-dap"
     },
     cmd = "FzfLua",
+    -- Register fzf-lua as the UI used by neovim as a picker
+    -- see :help vim.ui.select for more
+    -- This allows us to use fzf-lua (and the fuzzy find)
+    -- with many plugin menus that were not necessarily built
+    -- to work with fzf-lua support
+    init = function()
+        require("fzf-lua").register_ui_select()
+    end,
     opts = {
         "hide",
         fzf_opts = { ["--cycle"] = true },
