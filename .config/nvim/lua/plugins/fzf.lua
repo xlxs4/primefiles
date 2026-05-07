@@ -35,6 +35,8 @@ return {
     },
     keys = {
         -- find
+        { "<leader>fq",  "<cmd>FzfLua quickfix<CR>",              desc = "Quickfix" },
+        { "<leader>fl",  "<cmd>FzfLua loclist<CR>",               desc = "Loclist" },
         { "<leader>fdd", "<cmd>FzfLua diagnostics_document<CR>",  desc = "Find Diagnostics (Buffer)" },
         { "<leader>fdw", "<cmd>FzfLua diagnostics_workspace<CR>", desc = "Find Diagnostics" },
         { "<leader>fb",  "<cmd>FzfLua buffers<CR>",               desc = "Find Buffers" },
