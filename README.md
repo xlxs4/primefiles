@@ -73,6 +73,16 @@ codelldb
 starship
 - https://github.com/starship/starship?tab=readme-ov-file#-installation
 
+diffoscope
+- https://diffoscope.org/
+
+automake
+- https://formulae.brew.sh/formula/automake
+
+valgrind
+- https://github.com/LouisBrunner/valgrind-macos
+- https://github.com/LouisBrunner/valgrind-macos/issues/161#issuecomment-3523669293
+
 zsh
 - https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default
 
