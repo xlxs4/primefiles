@@ -32,9 +32,6 @@ return {
                 syntax_limit_b = 1024 * 100, -- 100 KB
             }
         },
-        winopts = {
-            preview = { default = "bat_native" }
-        }
     },
     keys = {
         -- find
