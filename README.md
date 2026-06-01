@@ -252,6 +252,9 @@ For ubuntu/debian:
 - export `CC` and `CXX`
 - also symlink cc and c++
 
+lld
+- brew install lld
+
 CMake
 - https://cmake.org/
 
