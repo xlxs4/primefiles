@@ -213,6 +213,23 @@ Dotfiles management
 - `cd primefiles && stow .`
 - TODO: consider using [`--dotfiles`](https://www.gnu.org/software/stow/manual/stow.html)
 
+## Claude Code
+
+`~/.claude/` is mostly runtime state, caches, and transcripts; only a few small,
+portable files are tracked here. The `.claude/.gitignore` is an allowlist (deny `*`,
+opt back in per file) so new state and secrets can never leak in. Tracked: `settings.json`,
+`statusline-command.sh`, `skills/learn/`, `plugins/known_marketplaces.json`. `stow .`
+tree-folds into the existing real `~/.claude/` and creates per-file symlinks; state is
+untouched.
+
+Bootstrap on a new machine (the rest regenerates from official installers):
+1. **Plugins** — restore automatically from `enabledPlugins` in `settings.json`;
+   marketplaces are listed in `plugins/known_marketplaces.json`.
+2. **Matt Pocock skills** — `npx skills@latest add mattpocock/skills`, then run
+   `/setup-matt-pocock-skills` inside Claude.
+3. **Context7** — `npx ctx7 setup` (OAuth + API key + installs the `find-docs` skill and
+   the `context7.md` rule).
+
 Neovim
 - install bob: https://github.com/MordechaiHadad/bob
 - install neovim nightly: bob install nightly && bob use nightly

@@ -1,0 +1,11 @@
+# ignore everything by default
+*
+# …then opt back in
+!.gitignore
+!settings.json
+!statusline-command.sh
+!skills/
+!skills/learn/
+!skills/learn/**
+!plugins/
+!plugins/known_marketplaces.json
