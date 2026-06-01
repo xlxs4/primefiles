@@ -18,5 +18,17 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "network": { "allowedDomains": ["*"] },
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh", "~/.aws", "~/.gnupg", "~/.config/gh",
+        "~/.netrc", "~/.npmrc", "~/.docker/config.json"
+      ]
+    },
+    "excludedCommands": ["gh", "docker *", "gcloud", "terraform"]
+  },
   "theme": "light"
 }
