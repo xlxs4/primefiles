@@ -30,5 +30,15 @@
     },
     "excludedCommands": ["gh", "docker *", "gcloud", "terraform"]
   },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          { "type": "command", "command": "bash ~/.claude/hooks/session-start.sh" }
+        ]
+      }
+    ]
+  },
   "theme": "light"
 }
