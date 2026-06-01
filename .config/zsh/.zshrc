@@ -50,3 +50,19 @@ eval "$(starship init zsh)"
     compinit -C -d $cache_dir/.zcompdump
 }
 
+# Claude Code: parallel + remote sessions
+# Persistent remote-control server; on-demand sessions each get a git worktree.
+# Drive from claude.ai/code or the Claude iPhone app (press 'q'/'w' in-session
+# for QR / spawn-mode toggle). Requires a subscription login and one-time
+# workspace trust (`claude` in the dir once). Sandbox is inherited from
+# ~/.claude/settings.json (no --sandbox flag in CC 2.1.159).
+cc-remote() {
+  local name="${1:-$(basename "$PWD")}"
+  local cap="${2:-8}"
+  claude remote-control --name "$name" --spawn worktree --capacity "$cap"
+}
+
+# Launch a local session with a non-default permission mode (acceptEdits|auto|
+# bypassPermissions). Defaults to acceptEdits. Extra args pass through.
+cc-auto() { claude --permission-mode "${1:-acceptEdits}" "${@:2}"; }
+
