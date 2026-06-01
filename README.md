@@ -218,7 +218,7 @@ Dotfiles management
 `~/.claude/` is mostly runtime state, caches, and transcripts; only a few small,
 portable files are tracked here. The `.claude/.gitignore` is an allowlist (deny `*`,
 opt back in per file) so new state and secrets can never leak in. Tracked: `settings.json`,
-`statusline-command.sh`, `skills/learn/`, `plugins/known_marketplaces.json`. `stow .`
+`statusline-command.sh`, `skills/learn/`, `skills/caveman/`, `hooks/session-start.sh`, `plugins/known_marketplaces.json`. `stow .`
 tree-folds into the existing real `~/.claude/` and creates per-file symlinks; state is
 untouched.
 
@@ -229,6 +229,54 @@ Bootstrap on a new machine (the rest regenerates from official installers):
    `/setup-matt-pocock-skills` inside Claude.
 3. **Context7** — `npx ctx7 setup` (OAuth + API key + installs the `find-docs` skill and
    the `context7.md` rule).
+
+### Autonomy posture
+
+`settings.json` enables the macOS sandbox globally with `autoAllowBashIfSandboxed`,
+so benign `bash` runs without a prompt while staying OS-contained (writes limited
+to the working dir; `~/.ssh`, `~/.aws`, `~/.gnupg`, `~/.config/gh`, `~/.netrc`,
+`~/.npmrc`, `~/.docker/config.json` are `denyRead`; `rm` on `/` or `~` still
+prompts). Network is allow-all (`allowedDomains: ["*"]`) for frictionless dev —
+the accepted tradeoff is exfil risk, mitigated by the credential `denyRead`.
+`gh`, `docker`, `gcloud`, and `terraform` are in `excludedCommands` (Seatbelt
+breaks TLS for Go CLIs), so they run outside the sandbox via the normal
+permission flow.
+
+`permissions.defaultMode` is intentionally left at `default`, so **file edits
+still prompt** in any repo by default. To get prompt-free edits in a repo you
+trust, add to that repo's `.claude/settings.json` (or `.claude/settings.local.json`
+for an untracked personal override):
+
+```json
+{ "permissions": { "defaultMode": "acceptEdits" } }
+```
+
+Or elevate per-launch without any file: `claude --permission-mode acceptEdits`
+(also `auto` for classifier-judged edits, or `bypassPermissions`). The `cc-auto`
+zsh helper wraps this. Untrusted clones, lacking such a file, keep prompting for
+edits; their bash still runs but stays sandbox-contained.
+
+A `SessionStart(startup)` hook (`hooks/session-start.sh`) sets caveman tone ON by
+default for main sessions (not subagents). Say **"normal mode"** to turn it off;
+subagent model defaults to inherit.
+
+### Parallel and remote sessions
+
+- **Remote / iPhone + browser parallel:** `cc-remote [name] [capacity]` (zsh
+  function) runs `claude remote-control --spawn worktree`, a persistent server
+  that spawns each on-demand session in its own git worktree. The helper
+  defaults `--name` to the current directory's basename and `--capacity` to 8
+  (the CLI's own default is 32). Drive it from
+  `claude.ai/code` or the Claude iPhone app. One-time setup: log in with a
+  subscription account (full `/login`, not `setup-token`), and accept workspace
+  trust once by running `claude` in the directory. Outbound HTTPS only — no
+  inbound port. For fully unattended remote runs, optionally launch with
+  `--permission-mode bypassPermissions`.
+- **Local hands-on parallel:** `claude --worktree [name] --tmux` (`-w`) is built
+  in — it creates `.claude/worktrees/<name>` on branch `worktree-<name>` and
+  opens it in an iTerm2 tmux session. Set `worktree.baseRef` in settings to
+  `"fresh"` (default; branch from origin default) or `"head"` (branch from local
+  HEAD incl. unpushed) to control the base.
 
 Neovim
 - install bob: https://github.com/MordechaiHadad/bob
