@@ -7,5 +7,9 @@
 !skills/
 !skills/learn/
 !skills/learn/**
+!skills/caveman/
+!skills/caveman/**
+!hooks/
+!hooks/session-start.sh
 !plugins/
 !plugins/known_marketplaces.json
