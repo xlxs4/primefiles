@@ -1,9 +1,22 @@
 {
-	"theme": "auto",
 	"color_scheme": "auto",
 	"light_color_scheme": "Alabaster.sublime-color-scheme",
 	"dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
 	"font_face": "CommitMono",
 	"font_size": 14,
-	"auto_complete": false
+	"rulers": [[100, "solid"]],
+	"ruler_width": 2.0,
+	"scroll_context_lines": 8,
+	"indent_guide_options": ["draw_normal", "solid"],
+	"ensure_newline_at_eof_on_save": true,
+	"auto_complete": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_cycle": true,
+	"auto_complete_use_index": false,
+	"auto_complete_include_snippets": false,
+	"copy_with_empty_selection": false,
+	"file_tab_style": "square",
+	"show_encoding": true,
+	"show_line_endings": true,
+	"hardware_acceleration": "opengl"
 }
