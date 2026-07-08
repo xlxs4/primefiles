@@ -4,38 +4,12 @@ return {
     ---@module "blink.cmp"
     ---@type blink.cmp.Config
     opts = {
-        sources = {
-            default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-            providers = {
-                lazydev = {
-                    name = "LazyDev",
-                    module = "lazydev.integrations.blink",
-                    -- make lazydev completions top priority (see `:h blink.cmp`)
-                    score_offset = 100,
-                },
-            },
-        },
-        cmdline = {
-            enabled = false,
-        },
-        appearance = {
-            nerd_font_variant = "mono",
-        },
+        sources = { default = { "buffer" } },
+        cmdline = { enabled = false },
+        appearance = { nerd_font_variant = "mono" },
         completion = {
-            accept = {
-                auto_brackets = {
-                    enabled = true,
-                },
-            },
-            documentation = {
-                auto_show = true,
-                auto_show_delay_ms = 200,
-            },
-            menu = {
-                draw = {
-                    treesitter = { "lsp" },
-                },
-            },
+            accept = { auto_brackets = { enabled = true } },
+            menu = { auto_show = false },
         },
         keymap = {
             preset = "default",
