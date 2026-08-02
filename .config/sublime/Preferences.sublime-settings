@@ -18,5 +18,8 @@
 	"file_tab_style": "square",
 	"show_encoding": true,
 	"show_line_endings": true,
-	"hardware_acceleration": "opengl"
+	"hardware_acceleration": "opengl",
+	"vintage_start_in_command_mode": true,
+	"relative_line_numbers": true,
+	"ignored_packages": []
 }
