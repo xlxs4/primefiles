@@ -1,9 +1,11 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
 	"color_scheme": "auto",
 	"light_color_scheme": "Alabaster.sublime-color-scheme",
 	"dark_color_scheme": "Alabaster Dark.sublime-color-scheme",
 	"font_face": "CommitMono",
-	"font_size": 14,
+	"font_size": 10,
 	"rulers": [[100, "solid"]],
 	"ruler_width": 2.0,
 	"scroll_context_lines": 8,
@@ -18,8 +20,10 @@
 	"file_tab_style": "square",
 	"show_encoding": true,
 	"show_line_endings": true,
+	"show_panel_on_build": false,
 	"hardware_acceleration": "opengl",
-	"vintage_start_in_command_mode": true,
-	"relative_line_numbers": true,
-	"ignored_packages": []
+	"dictionary": "",
+	"spelling_selector": "",
+	"show_spelling_errors": false,
+	"draw_indent_guides": false,
 }
