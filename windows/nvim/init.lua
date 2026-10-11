@@ -103,6 +103,7 @@ vim.pack.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
+	"https://github.com/stevearc/overseer.nvim",
 })
 
 --- alabaster
@@ -126,7 +127,7 @@ vim.keymap.set("n", "<leader>O", "<cmd>Oil<CR>", { desc = "Oil" })
 
 --- fzf-lua
 require("fzf-lua").setup({
-  "hide", -- profile
+	{ "hide" }, -- profile
   fzf_opts = { ["--cycle"] = true },
   defaults = {
     -- Disable all icons across pickers. The defaults table
@@ -148,6 +149,10 @@ require("fzf-lua").setup({
       syntax_limit_b = 1024 * 100, -- 100 KB
     },
   },
+  lsp = {
+	  -- Disable icons in lsp.symbols
+	  symbols = { symbol_style = 3 }
+  }
 })
 
 -- find
@@ -158,36 +163,49 @@ vim.keymap.set("n", "<leader>fdw", "<cmd>FzfLua diagnostics_workspace<CR>", { de
 vim.keymap.set("n", "<leader>fb",  "<cmd>FzfLua buffers<CR>",               { desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fw",  "<cmd>FzfLua grep_cword<CR>",            { desc = "Find Current Word" })
 vim.keymap.set({ "n", "o", "x" },
-                    "<leader>fv",  "<cmd>FzfLua grep_visual<CR>",           { desc = "Find Selection" })
-vim.keymap.set("n", "<leader>ftg", "<cmd>FzfLua tags<CR>",                  { desc = "Find Tags" })
-vim.keymap.set("n", "<leader>fta", "<cmd>FzfLua tabs<CR>",                  { desc = "Find Tabs" })
-vim.keymap.set("n", "<leader>fts", "<cmd>FzfLua tagstack<CR>",              { desc = "Tagstack" })
-vim.keymap.set("n", "<leader>ff",  "<cmd>FzfLua files<CR>",                 { desc = "Find Files" })
-vim.keymap.set("n", "<leader>fo",  "<cmd>FzfLua oldfiles<CR>",              { desc = "Recent" })
-vim.keymap.set("n", "<leader>fp",  "<cmd>FzfLua global<CR>",                { desc = "Fuzzy Find Global" })
-vim.keymap.set("n", "<leader>fj",  "<cmd>FzfLua jumps<CR>",                 { desc = "Jump List" })
-vim.keymap.set("n", "<leader>fm",  "<cmd>FzfLua marks<CR>",                 { desc = "Marks" })
-vim.keymap.set("n", "<leader>fc",  "<cmd>FzfLua changes<CR>",               { desc = "Changes" })
-vim.keymap.set("n", "<leader>fu",  "<cmd>FzfLua undotree<CR>",              { desc = "History Undo Tree" })
+                    "<leader>fv",  "<cmd>FzfLua grep_visual<CR>", { desc = "Find Selection" })
+vim.keymap.set("n", "<leader>ftg", "<cmd>FzfLua tags<CR>",        { desc = "Find Tags" })
+vim.keymap.set("n", "<leader>fta", "<cmd>FzfLua tabs<CR>",        { desc = "Find Tabs" })
+vim.keymap.set("n", "<leader>fts", "<cmd>FzfLua tagstack<CR>",    { desc = "Tagstack" })
+vim.keymap.set("n", "<leader>ff",  "<cmd>FzfLua files<CR>",       { desc = "Find Files" })
+vim.keymap.set("n", "<leader>fo",  "<cmd>FzfLua oldfiles<CR>",    { desc = "Recent" })
+vim.keymap.set("n", "<leader>fp",  "<cmd>FzfLua global<CR>",      { desc = "Fuzzy Find Global" })
+vim.keymap.set("n", "<leader>fj",  "<cmd>FzfLua jumps<CR>",       { desc = "Jump List" })
+vim.keymap.set("n", "<leader>fm",  "<cmd>FzfLua marks<CR>",       { desc = "Marks" })
+vim.keymap.set("n", "<leader>fc",  "<cmd>FzfLua changes<CR>",     { desc = "Changes" })
+vim.keymap.set("n", "<leader>fu",  "<cmd>FzfLua undotree<CR>",    { desc = "History Undo Tree" })
 
 -- search
-vim.keymap.set("n", "<leader>sl",  "<cmd>FzfLua builtin<CR>",               { desc = "Fuzzy Find Commands" })
-vim.keymap.set("n", "<leader>sr",  "<cmd>FzfLua resume<CR>",                { desc = "Fuzzy Find Resume" })
-vim.keymap.set("n", "<leader>sg",  "<cmd>FzfLua live_grep_native<CR>",      { desc = "Grep" })
-vim.keymap.set("n", "<leader>s/",  "<cmd>FzfLua blines<CR>",                { desc = "Fuzzy Find Buffer Lines" })
-vim.keymap.set("n", "<leader>sh",  "<cmd>FzfLua helptags<CR>",              { desc = "Help Tags" })
-vim.keymap.set("n", "<leader>sm",  "<cmd>FzfLua manpages<CR>",              { desc = "Man Pages" })
-vim.keymap.set("n", "<leader>sc",  "<cmd>FzfLua command_history<CR>",       { desc = "Command History" })
+vim.keymap.set("n", "<leader>sl",  "<cmd>FzfLua builtin<CR>",          { desc = "Fuzzy Find Commands" })
+vim.keymap.set("n", "<leader>sr",  "<cmd>FzfLua resume<CR>",           { desc = "Fuzzy Find Resume" })
+vim.keymap.set("n", "<leader>sg",  "<cmd>FzfLua live_grep_native<CR>", { desc = "Grep" })
+vim.keymap.set("n", "<leader>s/",  "<cmd>FzfLua blines<CR>",           { desc = "Fuzzy Find Buffer Lines" })
+vim.keymap.set("n", "<leader>sh",  "<cmd>FzfLua helptags<CR>",         { desc = "Help Tags" })
+vim.keymap.set("n", "<leader>sm",  "<cmd>FzfLua manpages<CR>",         { desc = "Man Pages" })
+vim.keymap.set("n", "<leader>sc",  "<cmd>FzfLua command_history<CR>",  { desc = "Command History" })
  
 -- git
-vim.keymap.set("n", "<leader>gf",  "<cmd>FzfLua git_files<CR>",             { desc = "Git Files" })
-vim.keymap.set("n", "<leader>gs",  "<cmd>FzfLua git_status<CR>",            { desc = "Git Status" })
-vim.keymap.set("n", "<leader>gd",  "<cmd>FzfLua git_diff<CR>",              { desc = "Git Diff" })
-vim.keymap.set("n", "<leader>gc",  "<cmd>FzfLua git_commits<CR>",           { desc = "Git Commits" })
-vim.keymap.set("n", "<leader>gh",  "<cmd>FzfLua git_hunks<CR>",             { desc = "Git Hunks" })
-vim.keymap.set("n", "<leader>gbc", "<cmd>FzfLua git_bcommits<CR>",          { desc = "Git Commits (Buffer)" })
-vim.keymap.set("n", "<leader>gbl", "<cmd>FzfLua git_blame<CR>",             { desc = "Git Blame (Buffer)" })
-vim.keymap.set("n", "<leader>gbb", "<cmd>FzfLua git_branches<CR>",          { desc = "Git Branches" })
+vim.keymap.set("n", "<leader>gf",  "<cmd>FzfLua git_files<CR>",    { desc = "Git Files" })
+vim.keymap.set("n", "<leader>gs",  "<cmd>FzfLua git_status<CR>",   { desc = "Git Status" })
+vim.keymap.set("n", "<leader>gd",  "<cmd>FzfLua git_diff<CR>",     { desc = "Git Diff" })
+vim.keymap.set("n", "<leader>gc",  "<cmd>FzfLua git_commits<CR>",  { desc = "Git Commits" })
+vim.keymap.set("n", "<leader>gh",  "<cmd>FzfLua git_hunks<CR>",    { desc = "Git Hunks" })
+vim.keymap.set("n", "<leader>gbc", "<cmd>FzfLua git_bcommits<CR>", { desc = "Git Commits (Buffer)" })
+vim.keymap.set("n", "<leader>gbl", "<cmd>FzfLua git_blame<CR>",    { desc = "Git Blame (Buffer)" })
+vim.keymap.set("n", "<leader>gbb", "<cmd>FzfLua git_branches<CR>", { desc = "Git Branches" })
+
+-- lsp
+vim.keymap.set("n", "<leader>ll", "<cmd>FzfLua lsp_document_symbols<CR>",      { desc = "LSP Symbols (Buffer)" })
+vim.keymap.set("n", "<leader>lL", "<cmd>FzfLua lsp_workspace_symbols<CR>",     { desc = "LSP Symbols" })
+vim.keymap.set("n", "<leader>ld", "<cmd>FzfLua lsp_document_diagnostics<CR>",  { desc = "LSP Diagnostics (Buffer)" })
+vim.keymap.set("n", "<leader>lD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", { desc = "LSP Diagnostics" })
+
+-- Register fzf-lua as the UI used by neovim as a picker
+-- see :help vim.ui.select for more
+-- This allows us to use fzf-lua (and the fuzzy find)
+-- with many plugin menus that were not necessarily built
+-- to work with fzf-lua support.
+require("fzf-lua").register_ui_select()
 
 --- which-key
 require("which-key").setup({
@@ -230,6 +248,8 @@ require("which-key").setup({
     { "<leader>f", group = "find" },
     { "<leader>s", group = "search" },
     { "<leader>g", group = "git" },
+    { "<leader>l", group = "lsp" },
+    { "<leader>o", group = "overseer" },
   },
 })
 
@@ -262,7 +282,7 @@ cmp.setup({
 			draw = {
 				columns = { { 'label', 'label_description', gap = 1 }, { 'kind' } }
 			}
-		}
+		} 
 	},
 	keymap = {
 		preset = "default",
@@ -286,3 +306,8 @@ cmp.setup({
 	}
 })
 
+--- overseer
+vim.keymap.set("n", "<leader>oo", "<cmd>OverseerToggle<CR>", { desc = "Task List" })
+vim.keymap.set("n", "<leader>ow", "<cmd>OverseerRun<CR>",    { desc = "Run Task" })
+vim.keymap.set("n", "<leader>oe", "<cmd>OverseerShell<CR>",  { desc = "Create + Run Shell Command" })
+vim.keymap.set("n", "<leader>or", "<cmd>OverseerShell!<CR>", { desc = "Create Shell Command Task" })
