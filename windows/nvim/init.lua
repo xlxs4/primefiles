@@ -99,6 +99,10 @@ vim.pack.add({
 	"https://github.com/ibhagwan/fzf-lua",
 	"https://github.com/unblevable/quick-scope",
 	"https://github.com/folke/which-key.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/saghen/blink.lib",
+	"https://github.com/saghen/blink.cmp",
 })
 
 --- alabaster
@@ -227,5 +231,58 @@ require("which-key").setup({
     { "<leader>s", group = "search" },
     { "<leader>g", group = "git" },
   },
+})
+
+--- nvim-treesitter
+require('nvim-treesitter').install({
+	"c",
+	"cpp",
+	"julia"
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'c', 'cpp', 'julia' },
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
+
+--- nvim-lspconfig
+vim.lsp.enable("clangd")
+
+--- blink
+local cmp = require('blink.cmp')
+cmp.build():pwait()
+cmp.setup({
+	sources = { default = { "buffer" } },
+	cmdline = { enabled = false },
+	completion = {
+		menu = {
+			auto_show = false,
+			draw = {
+				columns = { { 'label', 'label_description', gap = 1 }, { 'kind' } }
+			}
+		}
+	},
+	keymap = {
+		preset = "default",
+		["<C-o>"] = { "show" },
+		["<C-k>"] = { "select_prev", "fallback" },
+		["<C-j>"] = { "select_next", "fallback" },
+		["<C-l>"] = { "select_and_accept" },
+		["<C-h>"] = { "hide" },
+		["<Up>"] = false,
+		["<Down>"] = false,
+		["<C-y>"] = false,
+		["<C-e>"] = false,
+		["<C-space>"] = false
+	},
+	fuzzy = {
+		sorts = {
+			"exact",
+			"score",
+			"sort_text"
+		}
+	}
 })
 
