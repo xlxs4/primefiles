@@ -91,19 +91,17 @@ vim.keymap.set("n", "<leader>z", function()
 end, { desc = "Toggle zoom" })
 
 --- Plugins
-vim.g.qs_highlight_on_keys = { "f", "F" } -- for quick-scope
 vim.pack.add({
 	"https://github.com/p00f/alabaster.nvim",
 	"https://github.com/rachartier/tiny-cmdline.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/ibhagwan/fzf-lua",
-	"https://github.com/unblevable/quick-scope",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
-	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/saghen/blink.lib",
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/stevearc/overseer.nvim",
+	"https://github.com/nvim-lualine/lualine.nvim",
 })
 
 --- alabaster
@@ -149,10 +147,6 @@ require("fzf-lua").setup({
       syntax_limit_b = 1024 * 100, -- 100 KB
     },
   },
-  lsp = {
-	  -- Disable icons in lsp.symbols
-	  symbols = { symbol_style = 3 }
-  }
 })
 
 -- find
@@ -193,12 +187,6 @@ vim.keymap.set("n", "<leader>gh",  "<cmd>FzfLua git_hunks<CR>",    { desc = "Git
 vim.keymap.set("n", "<leader>gbc", "<cmd>FzfLua git_bcommits<CR>", { desc = "Git Commits (Buffer)" })
 vim.keymap.set("n", "<leader>gbl", "<cmd>FzfLua git_blame<CR>",    { desc = "Git Blame (Buffer)" })
 vim.keymap.set("n", "<leader>gbb", "<cmd>FzfLua git_branches<CR>", { desc = "Git Branches" })
-
--- lsp
-vim.keymap.set("n", "<leader>ll", "<cmd>FzfLua lsp_document_symbols<CR>",      { desc = "LSP Symbols (Buffer)" })
-vim.keymap.set("n", "<leader>lL", "<cmd>FzfLua lsp_workspace_symbols<CR>",     { desc = "LSP Symbols" })
-vim.keymap.set("n", "<leader>ld", "<cmd>FzfLua lsp_document_diagnostics<CR>",  { desc = "LSP Diagnostics (Buffer)" })
-vim.keymap.set("n", "<leader>lD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", { desc = "LSP Diagnostics" })
 
 -- Register fzf-lua as the UI used by neovim as a picker
 -- see :help vim.ui.select for more
@@ -248,7 +236,6 @@ require("which-key").setup({
     { "<leader>f", group = "find" },
     { "<leader>s", group = "search" },
     { "<leader>g", group = "git" },
-    { "<leader>l", group = "lsp" },
     { "<leader>o", group = "overseer" },
   },
 })
@@ -266,9 +253,6 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.treesitter.start()
   end,
 })
-
---- nvim-lspconfig
-vim.lsp.enable("clangd")
 
 --- blink
 local cmp = require('blink.cmp')
@@ -311,3 +295,17 @@ vim.keymap.set("n", "<leader>oo", "<cmd>OverseerToggle<CR>", { desc = "Task List
 vim.keymap.set("n", "<leader>ow", "<cmd>OverseerRun<CR>",    { desc = "Run Task" })
 vim.keymap.set("n", "<leader>oe", "<cmd>OverseerShell<CR>",  { desc = "Create + Run Shell Command" })
 vim.keymap.set("n", "<leader>or", "<cmd>OverseerShell!<CR>", { desc = "Create Shell Command Task" })
+
+--- lualine
+require("lualine").setup({
+	options = {
+		icons_enabled = false,
+		section_separators = '',
+		component_separators = '|'
+	},
+	sections = {
+		lualine_b = { "branch" },
+		lualine_y = { },
+		lualine_z = { "searchcount" },
+	}
+})
