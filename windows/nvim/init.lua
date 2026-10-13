@@ -102,6 +102,7 @@ vim.pack.add({
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/stevearc/overseer.nvim",
 	"https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/stevearc/quicker.nvim",
 })
 
 --- alabaster
@@ -305,7 +306,39 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_b = { "branch" },
-		lualine_y = { },
+		lualine_y = { "progress" },
 		lualine_z = { "searchcount" },
 	}
+})
+
+--- quicker
+require("quicker").setup({
+	highlight = { lsp = false },
+	type_icons = {
+		E = "E",
+		W = "W",
+		I = "I",
+		N = "N",
+		H = "H"
+	},
+	keys = {
+		{
+			">", function()
+				require("quicker").expand({ before = 2, after = 2, add_to_existing = true})
+			end,
+			desc = "Expand quickfix content",
+		},
+		{
+			"<", function()
+				require("quicker").collapse()
+			end,
+			desc = "Collapse quickfix content",
+		},
+	}
+})
+
+vim.keymap.set("n", "<leader>q", function()
+	require("quicker").toggle()
+end, {
+	desc = "Toggle quickfix"
 })
