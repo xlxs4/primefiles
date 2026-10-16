@@ -1,0 +1,132 @@
+exclude stuff like the nvim.exe process or the dev directory from windows defender, or consider using a https://learn.microsoft.com/en-us/windows/dev-drive/ instead (you can't convert an existing drive to a dev drive)
+
+cactus viewer
+raddebugger
+milton
+wcap
+
+file pilot
+task slinger
+superluminal
+sublime text
+sublime merge
+power grep
+
+intel vtune (also https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2025-1/install-sampling-drivers-for-windows-targets.html)
+wsl
+powertoys
+  (always on top, awake, env vars, file locksmith,
+  grab and move, keyboard manager, registry preview)
+winget
+
+steam
+firefox
+vlc
+
+commitmono
+berkeleymono
+karmina bold (make a w:dev\fonts\ dir or something)
+
+use winget for:
+LLVM (add C:\Program Files\LLVM\bin to PATH)
+everything
+gh cli
+git
+juliaup
+sumatra pdf
+typst
+git lfs
+blender
+colorcop
+sharex
+imagemagick
+ctags
+fzf
+fd
+ripgrep (rg)
+bat
+delta (and configure git to use it as the pager)
+
+will probably need rustup as well for installing cargo bins (e.g., for blink.cmp)
+
+turn Smart App Control off
+keyboard manager:
+remap caps -> lctrl
+
+everything:
+doesn't work with keyboard manager "run app", known issue in GitHub
+go to Tools -> Options -> Keyboard -> "Ctrl + Enter" for "Show window Hotkey"
+go to Tools -> Options -> General -> Enable URL protocol
+we can now set keyboard manager with "Open URL", and use es, e.g.,:
+es:C:\Users\orous\Desktop\%20, set to ctrl+'
+
+go to file pilot options, toggle "Show Hidden Files"
+
+I put everything in Desktop, three dirs. apps, games, dev
+
+add C:\Users\orous\.local\bin to Path
+add C:\Users\orous\Desktop\apps\ to Path
+add C:\Program Files\Sublime Text\ to Path for subl.exe
+make new env var, EDITOR, with value subl -w
+
+install c++ build tools: https://learn.microsoft.com/en-us/cpp/build/building-on-the-command-line
+if you want Visual Studio as well, for the debugger, grab https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation (make sure to remove components such as copilot, test adapters, intellicode, vcpkg...)
+
+Apparently VS keeps installing Copilot crap with every update :) Go to Options -> Environment -> Product Updates -> Change update settings -> Change update settings (good UI btw) -> deselect Add newly recommended components for installed workloads on update
+if the AI features (copilot component) are installed, open the installer, go to Modify -> individual components -> copilot
+
+from Run: shell:startup
+create a startup.bat in the startup dir and add
+@echo off
+subst w: C:\Users\orous\Desktop\dev\
+subst a: C:\Users\orous\Desktop\apps\
+
+make a misc and a code dir. In misc, create a shell.bat:
+@echo off
+call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+set path=w:\hh\misc;%path%
+
+devenv is available from the visual studio install. Both the, e.g., Community edition and Build Tools co-exist, in different dirs. So, to get devenv, point to the correct vcvarsall:
+call "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
+
+and also grab a copy of the command prompt shortcut, put it in misc, go to the shortcut properties, in target append /k w:\hh\misc\shell.bat after cmd.exe, and do, e.g., start in w:\hh
+
+also add a sb.bat in misc with:
+@echo off
+subl --project w:\hh\hh.sublime-project
+
+make sure you have created the sublime project file
+
+a build.bat:
+@echo off
+
+if not exist build mkdir build
+pushd build
+cl -Zi -FC ..\code\win32_hh.cpp
+popd
+
+you can also pass things like nologo to cl, refer to, e.g., https://github.com/EpicGames/raddebugger/blob/master/build.bat
+
+make a data dir as well, open the exe in visual studio with devenv build\myexe.exe, go to the properties in the solution explorer, and set the working directory to the data dir, using the subst drive (w:\...\data)
+
+can also make a vs.bat for debug:
+@echo off
+devenv /debugexe w:\hh\build\win32_hh.exe
+
+can also make a rad.bat for debug:
+@echo off
+"a:\RAD Debugger.exe" w:\hh\build\win32_hh.exe
+
+For VS to find headers like the legacy DirectSound8 API dsound.h, go to the source, right click,
+click on myfile.cpp Properties, and set the Include Search Path to something akin to the following:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\
+
+Win+V to enable clipboard history
+
+Grab Intel ISA reference: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+Agner Fog manuals: https://www.agner.org/optimize/
+cpumemory: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+
+enable long paths: https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later
+
+in firefox, set browser.tabs.insertAfterCurrent to true in about:config
