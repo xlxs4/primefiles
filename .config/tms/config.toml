@@ -1,8 +1,8 @@
-bookmarks = [
-    ".",
-    "~/primefiles/",
-]
-
 [[search_dirs]]
-path = "~/gh"
+path = "/home/xlxs4/dev"
 depth = 1
+
+[shortcuts]
+ctrl-j = "move_down"
+ctrl-k = "move_up"
+
