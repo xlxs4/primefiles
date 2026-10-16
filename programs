@@ -1,0 +1,10 @@
+- Install CachyOS using vetoy/limine
+  - manual partition, brtfs, LUKS, niri, fish
+- sudo pacman -S neovim \
+  git-delta \
+  github-cli
+  - setup git to work with delta
+- install rustup
+- cargo install --locked tree-sitter-cli
+- delete the standard home subdirs (Templates, Videos...). Leave Downloads intact
+
